@@ -13,25 +13,24 @@
   <!-- STYLES -->
   <style>
     :root {
-      /* iets lichtere, warme dark-mode */
-      --bg-main: #0f172a;        /* was bijna zwart, nu donkerblauw */
-      --bg-elevated: #111827;
-      --bg-elevated-soft: #1f2937;
+      --bg-main: #020617;             /* heel donker blauw/zwart */
+      --bg-elevated: #020617;
+      --bg-elevated-soft: #0b1220;
       --bg-accent-soft: rgba(249, 115, 22, 0.12);
 
       --text-main: #e5e7eb;
       --text-soft: #9ca3af;
       --text-muted: #6b7280;
 
-      --accent: #f97316;         /* oranje */
+      --accent: #f97316;              /* oranje */
       --accent-soft: #fed7aa;
       --accent-strong: #ea580c;
 
       --border-subtle: rgba(148, 163, 184, 0.25);
-      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.55);
+      --shadow-soft: 0 22px 70px rgba(15, 23, 42, 0.8);
 
       --radius-lg: 18px;
-      --radius-xl: 24px;
+      --radius-xl: 26px;
       --radius-full: 999px;
 
       --transition-fast: 0.18s ease-out;
@@ -46,7 +45,8 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, var(--bg-main) 45%, #020617 100%);
+      background:
+        radial-gradient(circle at top, #020617 0, #020617 40%, #000000 100%);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -80,7 +80,8 @@
       max-width: 1120px;
     }
 
-    /* Top label */
+    /* Top badge */
+
     .top-badge-row {
       display: flex;
       justify-content: center;
@@ -94,20 +95,21 @@
       padding: 6px 12px;
       border-radius: 999px;
       border: 1px solid rgba(248, 250, 252, 0.18);
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
-      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.55);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.8));
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
       backdrop-filter: blur(16px);
     }
 
     .top-badge-pill {
-      background: rgba(56, 189, 248, 0.18);
-      color: #e0f2fe;
+      background: rgba(249, 115, 22, 0.16);
+      color: #fed7aa;
       font-size: 11px;
       font-weight: 600;
       padding: 4px 9px;
       border-radius: 999px;
       letter-spacing: 0.03em;
       text-transform: uppercase;
+      border: 1px solid rgba(249, 115, 22, 0.6);
     }
 
     .top-badge-text {
@@ -126,12 +128,12 @@
       box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
     }
 
-    /* HERO WRAPPER */
+    /* Hero layout */
 
     .hero-shell {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 26px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.05fr);
+      gap: 28px;
       align-items: center;
     }
 
@@ -141,7 +143,7 @@
       }
     }
 
-    /* LEFT: TEXT / USP / FORM */
+    /* LEFT */
 
     .hero-left {
       display: flex;
@@ -198,7 +200,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .hero-usp-pill {
@@ -207,8 +209,8 @@
       gap: 7px;
       padding: 5px 10px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
       font-size: 11px;
       color: #e5e7eb;
     }
@@ -229,17 +231,13 @@
       font-size: 11px;
     }
 
-    /* FORM + INFO */
+    /* MAIN CARD */
 
     .hero-main-card {
-      background: linear-gradient(
-          135deg,
-          rgba(15, 23, 42, 0.95),
-          rgba(17, 24, 39, 0.96)
-        );
-      border-radius: 26px;
+      background: radial-gradient(circle at top left, #020617, #020617 35%, #000000 100%);
+      border-radius: var(--radius-xl);
       padding: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.45);
+      border: 1px solid rgba(148, 163, 184, 0.5);
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
@@ -250,9 +248,9 @@
       position: absolute;
       inset: -40%;
       background:
-        radial-gradient(circle at 10% 0%, rgba(248, 113, 22, 0.09), transparent 60%),
-        radial-gradient(circle at 85% 0%, rgba(56, 189, 248, 0.14), transparent 55%);
-      opacity: 0.95;
+        radial-gradient(circle at 10% 0%, rgba(248, 113, 22, 0.10), transparent 60%),
+        radial-gradient(circle at 85% 0%, rgba(56, 189, 248, 0.12), transparent 55%);
+      opacity: 0.9;
       pointer-events: none;
     }
 
@@ -278,9 +276,9 @@
 
     .hero-main-left {
       border-radius: 20px;
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9));
+      background: rgba(15, 23, 42, 0.95);
       padding: 14px 14px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.6);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -319,8 +317,8 @@
       margin-top: 4px;
       padding: 8px 10px;
       border-radius: 12px;
-      border: 1px dashed rgba(249, 115, 22, 0.6);
-      background: rgba(15, 23, 42, 0.75);
+      border: 1px dashed rgba(249, 115, 22, 0.8);
+      background: rgba(15, 23, 42, 0.95);
       font-size: 12px;
       color: #fed7aa;
       display: flex;
@@ -367,9 +365,9 @@
 
     .hero-main-right {
       border-radius: 20px;
-      background: radial-gradient(circle at top right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.92));
+      background: rgba(15, 23, 42, 0.96);
       padding: 14px 14px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.6);
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -400,8 +398,8 @@
       gap: 6px;
       padding: 5px 9px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.9);
       font-size: 11px;
       color: #e5e7eb;
       white-space: nowrap;
@@ -478,14 +476,14 @@
     .form-textarea {
       width: 100%;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.98);
       color: #e5e7eb;
       font-size: 13px;
       padding: 9px 11px;
       outline: none;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), transform 0.12s ease-out;
-      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.65);
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.85);
     }
 
     .form-input::placeholder,
@@ -509,32 +507,9 @@
       border-color: rgba(248, 113, 22, 0.95);
       box-shadow:
         0 0 0 1px rgba(251, 146, 60, 0.85),
-        0 18px 45px rgba(15, 23, 42, 0.9);
+        0 20px 50px rgba(15, 23, 42, 1);
       transform: translateY(-1px);
-      background: rgba(15, 23, 42, 0.98);
-    }
-
-    .form-inline-note {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 4px;
-      gap: 6px;
-    }
-
-    .form-inline-note small {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .form-inline-tag {
-      font-size: 11px;
-      color: #f97316;
-      background: rgba(248, 113, 22, 0.16);
-      border-radius: 999px;
-      padding: 3px 7px;
-      border: 1px solid rgba(248, 113, 22, 0.65);
-      white-space: nowrap;
+      background: rgba(15, 23, 42, 1);
     }
 
     .form-actions {
@@ -560,7 +535,7 @@
       align-items: center;
       gap: 8px;
       box-shadow:
-        0 18px 60px rgba(248, 113, 22, 0.4),
+        0 22px 70px rgba(248, 113, 22, 0.45),
         0 0 0 1px rgba(248, 250, 252, 0.04);
       transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-position 0.2s ease-out;
       background-size: 150%;
@@ -571,14 +546,14 @@
       transform: translateY(-1px);
       background-position: 100% 50%;
       box-shadow:
-        0 20px 70px rgba(248, 113, 22, 0.55),
+        0 24px 80px rgba(248, 113, 22, 0.6),
         0 0 0 1px rgba(248, 250, 252, 0.08);
     }
 
     .btn-primary:active {
       transform: translateY(0);
       box-shadow:
-        0 12px 35px rgba(248, 113, 22, 0.4),
+        0 14px 40px rgba(248, 113, 22, 0.45),
         0 0 0 1px rgba(248, 250, 252, 0.08);
     }
 
@@ -598,7 +573,7 @@
     .btn-primary-pill {
       padding: 3px 7px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.94);
+      background: rgba(15, 23, 42, 0.96);
       color: #fed7aa;
       font-size: 11px;
       display: inline-flex;
@@ -641,7 +616,7 @@
       border-radius: 999px;
       padding: 4px 8px;
       border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.92);
+      background: rgba(15, 23, 42, 0.96);
       font-size: 11px;
       color: #e5e7eb;
     }
@@ -667,7 +642,7 @@
       color: #e5e7eb;
     }
 
-    /* RIGHT COLUMN: INFO + USP + FAQ SHORT */
+    /* RIGHT COLUMN – COMPARISON / INFO */
 
     .hero-right-shell {
       display: flex;
@@ -677,10 +652,10 @@
 
     .hero-comparison-card {
       border-radius: 22px;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.94));
+      background: radial-gradient(circle at top, #020617, #020617 45%, #000000 100%);
       padding: 14px 15px 13px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      box-shadow: 0 16px 50px rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      box-shadow: 0 20px 70px rgba(15, 23, 42, 0.9);
     }
 
     .comparison-header {
@@ -745,7 +720,7 @@
 
     .comparison-col {
       border-radius: 14px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.96);
       border: 1px solid rgba(148, 163, 184, 0.7);
       padding: 9px 10px;
       display: flex;
@@ -804,7 +779,7 @@
     .comparison-highlight-row {
       margin-top: 7px;
       padding-top: 6px;
-      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
       font-size: 11px;
       color: #e5e7eb;
       display: flex;
@@ -822,8 +797,8 @@
     .comparison-highlight-badge {
       padding: 3px 8px;
       border-radius: 999px;
-      background: rgba(22, 163, 74, 0.16);
-      border: 1px solid rgba(22, 163, 74, 0.8);
+      background: rgba(22, 163, 74, 0.18);
+      border: 1px solid rgba(22, 163, 74, 0.85);
       color: #bbf7d0;
       font-size: 11px;
       font-weight: 500;
@@ -834,14 +809,14 @@
       color: var(--text-muted);
     }
 
-    /* MINI FAQ / EXTRA INFO */
+    /* EXTRA INFO */
 
     .hero-extra-card {
       border-radius: 22px;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.9));
+      background: rgba(15, 23, 42, 0.98);
       border: 1px solid rgba(148, 163, 184, 0.6);
       padding: 12px 14px 11px;
-      box-shadow: 0 14px 45px rgba(15, 23, 42, 0.8);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, 0.9);
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
       gap: 12px;
@@ -907,17 +882,17 @@
       color: #f97316;
     }
 
-    /* PAGE FOOTER */
+    /* FOOTER */
 
     .page-footer {
-      margin-top: 20px;
+      margin-top: 22px;
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px;
-      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      border-top: 1px solid rgba(148, 163, 184, 0.45);
       padding-top: 10px;
     }
 
@@ -946,14 +921,14 @@
           <div class="top-badge-pill">Pre‑order Oranje fan‑shirt</div>
           <div class="top-badge-text">
             <span class="top-badge-text-dot"></span>
-            Nieuwste levering verwacht vóór start WK 2026
+            Nieuwe levering verwacht vóór start WK 2026
           </div>
         </div>
       </div>
 
-      <!-- HERO SHELL -->
+      <!-- HERO -->
       <div class="hero-shell">
-        <!-- LEFT COLUMN -->
+        <!-- LEFT -->
         <div class="hero-left">
           <div class="hero-title-block">
             <div class="hero-kicker">
@@ -961,10 +936,10 @@
               Oranje fan‑shirt WK 2026
             </div>
             <h1 class="hero-title">
-              Scoor jouw <span>fan‑shirt</span> voordat het WK begint.
+              Scoor jouw <span>fan‑shirt</span> vóór de eerste aftrap.
             </h1>
             <p class="hero-subtitle">
-              Thuisshirt en uitshirt van het Nederlands elftal – fan‑versie, comfortabel om te dragen en een stuk betaalbaarder dan het officiële shirt.
+              Thuisshirt en uitshirt van het Nederlands elftal – fan‑versie, comfortabel om te dragen en veel betaalbaarder dan het officiële shirt. Ideaal voor wedstrijden kijken, op de tribune of gewoon thuis.
             </p>
           </div>
 
@@ -995,12 +970,12 @@
                   Eerst je maat doorgeven, daarna persoonlijke bevestiging.
                 </div>
                 <p class="hero-info-body">
-                  Vul hieronder je maat en gegevens in. Wij controleren handmatig je aanvraag en bevestigen je pre‑order persoonlijk per e‑mail, inclusief verwachte levertijd en betaalinstructies.
+                  Vul hieronder je maat en contactgegevens in. Wij controleren je aanvraag handmatig en sturen je een persoonlijke bevestiging per e‑mail, inclusief verwachte levertijd en betaalinstructies.
                 </p>
 
                 <div class="hero-info-highlight">
                   <span class="hero-info-badge">Let op</span>
-                  Eerste voorraad is volledig uitverkocht; met je pre‑order reserveren we jouw shirt in de volgende levering.
+                  De huidige voorraad is uitverkocht – met je pre‑order reserveren we jouw shirt in de volgende levering.
                 </div>
 
                 <div class="hero-meta-row">
@@ -1021,7 +996,7 @@
                   <div>
                     <div class="form-title">Pre‑order formulier</div>
                     <div class="form-subtitle">
-                      Geen automatische betaling – wij bevestigen altijd eerst je aanvraag.
+                      Je betaalt pas na onze bevestiging – nooit automatisch via deze pagina.
                     </div>
                   </div>
                   <div class="form-secure-pill">
@@ -1185,7 +1160,7 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN -->
+        <!-- RIGHT -->
         <div class="hero-right-shell">
           <div class="hero-comparison-card">
             <div class="comparison-header">
@@ -1291,7 +1266,7 @@
               <div class="extra-label">Levering & voorraad</div>
               <div class="extra-title">Uitverkocht – nu pre‑order mogelijk.</div>
               <div class="extra-text">
-                De huidige voorraad is volledig uitverkocht. Met je pre‑order reserveren we jouw maat in de volgende levering, zodat je je shirt op tijd binnen hebt vóór de eerste WK‑wedstrijd.
+                De huidige voorraad is uitverkocht. Met je pre‑order reserveren we jouw maat in de volgende levering, zodat je je shirt op tijd binnen hebt vóór de eerste WK‑wedstrijd.
               </div>
               <ul class="extra-list">
                 <li>
