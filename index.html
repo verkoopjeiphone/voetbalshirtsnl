@@ -2,883 +2,1329 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VoetbalshirtsNL – Oranje WK 2026 Fan Shirts</title>
 
-  <!-- ═══════════════════════════════════════════════
-       SEO: TITLE & META
-  ═══════════════════════════════════════════════ -->
-  <title>Fan-versie Oranje Shirt WK 2026 | Goedkoop & Betaalbaar – VoetbalshirtsNL</title>
-  <meta name="description" content="Bestel het fan-versie voetbalshirt van het Nederlands elftal WK 2026. Thuisshirt (oranje) en uitshirt (wit) voor maar €24,99. Pre-order nu – snel bezorgd!"/>
-  <meta name="keywords" content="oranje shirt WK 2026, fan versie voetbalshirt nederland, goedkoop nederland shirt 2026, oranje fanshirt kopen, nederland voetbalshirt goedkoop"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://www.nlvoetbalshirts.nl/"/>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- ═══════════════════════════════════════════════
-       SEO: OPEN GRAPH (social sharing)
-  ═══════════════════════════════════════════════ -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Fan-versie Oranje Shirt WK 2026 – €24,99 | VoetbalshirtsNL"/>
-  <meta property="og:description" content="Comfortabele fan-versie van het oranje WK 2026 shirt. Thuisshirt én uitshirt voor maar €24,99. Pre-order nu!"/>
-  <meta property="og:url" content="https://www.nlvoetbalshirts.nl/"/>
-  <meta property="og:image" content="https://www.nlvoetbalshirts.nl/oranje-shirt.jpg"/>
-  <meta property="og:locale" content="nl_NL"/>
-  <meta property="og:site_name" content="VoetbalshirtsNL"/>
-
-  <!-- ═══════════════════════════════════════════════
-       SEO: STRUCTURED DATA (Product + WebSite schema)
-  ═══════════════════════════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "VoetbalshirtsNL",
-        "url": "https://www.nlvoetbalshirts.nl",
-        "description": "Nederlandse webshop voor betaalbare fan-versie voetbalshirts van het Nederlands elftal",
-        "inLanguage": "nl-NL"
-      },
-      {
-        "@type": "Product",
-        "name": "Fan-versie Oranje Thuisshirt Nederland WK 2026",
-        "description": "Comfortabele fan-versie van het oranje thuisshirt van het Nederlands elftal voor het WK 2026. Maten S t/m XL.",
-        "brand": { "@type": "Brand", "name": "VoetbalshirtsNL" },
-        "offers": {
-          "@type": "Offer",
-          "price": "24.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/PreOrder",
-          "url": "https://www.nlvoetbalshirts.nl/bestellen.html",
-          "priceValidUntil": "2026-12-31"
-        },
-        "image": "https://www.nlvoetbalshirts.nl/oranje-shirt.jpg"
-      },
-      {
-        "@type": "Product",
-        "name": "Fan-versie Wit Uitshirt Nederland WK 2026",
-        "description": "Fan-versie van het witte uitshirt van het Nederlands elftal voor het WK 2026. Maten S t/m XL.",
-        "brand": { "@type": "Brand", "name": "VoetbalshirtsNL" },
-        "offers": {
-          "@type": "Offer",
-          "price": "24.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/PreOrder",
-          "url": "https://www.nlvoetbalshirts.nl/bestellen.html",
-          "priceValidUntil": "2026-12-31"
-        },
-        "image": "https://www.nlvoetbalshirts.nl/wit-shirt.jpg"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
-
+  <!-- STYLES -->
   <style>
-    /* ═══════════════════════════ TOKENS ═══════════════════════════ */
     :root {
-      --oranje:        #FF5500;
-      --oranje-donker: #cc4400;
-      --oranje-licht:  #fff0e6;
-      --zwart:         #111111;
-      --wit:           #ffffff;
-      --achtergrond:   #fff8f2;
-      --kaart-rand:    #e8e3dc;
-      --tekst:         #1a1a1a;
-      --tekst-zacht:   #555555;
-      --urgentie:      #c23d00;
+      /* iets lichtere, warme dark-mode */
+      --bg-main: #0f172a;        /* was bijna zwart, nu donkerblauw */
+      --bg-elevated: #111827;
+      --bg-elevated-soft: #1f2937;
+      --bg-accent-soft: rgba(249, 115, 22, 0.12);
+
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --text-muted: #6b7280;
+
+      --accent: #f97316;         /* oranje */
+      --accent-soft: #fed7aa;
+      --accent-strong: #ea580c;
+
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.55);
+
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-full: 999px;
+
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.25s ease;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      font-family: 'Barlow', sans-serif;
-      background: var(--achtergrond);
-      color: var(--tekst);
-      line-height: 1.6;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, var(--bg-main) 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* ═══════════════════════════ NAV ═══════════════════════════ */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; height: 68px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 40px;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid #ede8e0;
-      z-index: 100;
-      backdrop-filter: blur(6px);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.55rem;
-      letter-spacing: -0.5px;
+    a {
+      color: inherit;
       text-decoration: none;
-      color: var(--zwart);
     }
-    .logo span { color: var(--oranje); }
 
-    .nav-links {
-      list-style: none;
+    button {
+      font-family: inherit;
+    }
+
+    /* LAYOUT */
+
+    .page-shell {
+      min-height: 100vh;
       display: flex;
-      gap: 28px;
-    }
-    .nav-links a {
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #555;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--oranje); }
-
-    /* ═══════════════════════════ MAIN WRAPPER ═══════════════════════════ */
-    main { padding: 96px 20px 40px; }
-
-    /* ═══════════════════════════ HERO ═══════════════════════════ */
-    .hero {
-      max-width: 960px;
-      margin: 0 auto 56px;
+      justify-content: center;
+      padding: 28px 16px 40px;
     }
 
-    /* WK countdown banner */
-    .wk-banner {
+    .page-inner {
+      width: 100%;
+      max-width: 1120px;
+    }
+
+    /* Top label */
+    .top-badge-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .top-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--zwart);
-      color: var(--wit);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      margin-bottom: 18px;
-    }
-    .wk-banner .dot {
-      width: 7px; height: 7px;
-      background: var(--oranje);
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulse 1.4s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.4; transform: scale(0.8); }
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 250, 252, 0.18);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(16px);
     }
 
-    .hero-badge {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+    .top-badge-pill {
+      background: rgba(56, 189, 248, 0.18);
+      color: #e0f2fe;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      color: var(--oranje);
-      border: 1.5px solid var(--oranje);
-      display: inline-block;
-      padding: 4px 14px;
-      margin-bottom: 14px;
+    }
+
+    .top-badge-text {
+      font-size: 12px;
+      color: #cbd5f5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-badge-text-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    }
+
+    /* HERO WRAPPER */
+
+    .hero-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-shell {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* LEFT: TEXT / USP / FORM */
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-kicker {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-kicker-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      box-shadow: 0 0 0 5px rgba(248, 113, 22, 0.35);
     }
 
     .hero-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.4rem, 5vw, 3.2rem);
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      line-height: 1.05;
-      margin-bottom: 10px;
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #f9fafb;
     }
-    .hero-title span { color: var(--oranje); }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
     .hero-subtitle {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--tekst-zacht);
-      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--text-soft);
+      max-width: 520px;
     }
 
-    .hero-text {
-      font-size: 0.98rem;
-      color: var(--tekst-zacht);
-      max-width: 540px;
-      line-height: 1.65;
-      margin-bottom: 14px;
+    .hero-usp-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
     }
 
-    /* Prijsvergelijking highlight */
-    .prijs-vergelijking {
+    .hero-usp-pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: var(--oranje-licht);
-      border-left: 3px solid var(--oranje);
-      padding: 10px 16px;
-      margin-bottom: 18px;
-      font-size: 0.9rem;
-    }
-    .prijs-vergelijking .oud {
-      color: #999;
-      text-decoration: line-through;
-      font-size: 0.85rem;
-    }
-    .prijs-vergelijking .nieuw {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.5rem;
-      color: var(--oranje);
-    }
-    .prijs-vergelijking .label {
-      font-size: 0.8rem;
-      color: var(--tekst-zacht);
-      line-height: 1.3;
+      gap: 7px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      font-size: 11px;
+      color: #e5e7eb;
     }
 
-    .hero-actions {
+    .hero-usp-pill span {
+      font-size: 13px;
+    }
+
+    .hero-usp-icon-check {
+      width: 15px;
+      height: 15px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #22c55e, #15803d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5f9ef;
+      font-size: 11px;
+    }
+
+    /* FORM + INFO */
+
+    .hero-main-card {
+      background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.95),
+          rgba(17, 24, 39, 0.96)
+        );
+      border-radius: 26px;
+      padding: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(248, 113, 22, 0.09), transparent 60%),
+        radial-gradient(circle at 85% 0%, rgba(56, 189, 248, 0.14), transparent 55%);
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .hero-main-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.15fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 800px) {
+      .hero-main-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-main-left,
+    .hero-main-right {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-main-left {
+      border-radius: 20px;
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9));
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-info-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #bfdbfe;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-info-eyebrow-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(129, 140, 248, 0.6), transparent);
+    }
+
+    .hero-info-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .hero-info-body {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-soft);
+    }
+
+    .hero-info-highlight {
+      margin-top: 4px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px dashed rgba(249, 115, 22, 0.6);
+      background: rgba(15, 23, 42, 0.75);
+      font-size: 12px;
+      color: #fed7aa;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-info-badge {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(251, 146, 60, 0.9);
+      font-size: 11px;
+      color: #fed7aa;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-meta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
+      margin-top: 4px;
     }
 
-    .btn-primary {
-      display: inline-block;
-      background: var(--oranje);
-      color: var(--wit);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: none;
-      padding: 11px 30px;
-      cursor: pointer;
-      text-decoration: none;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 12px 100%);
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--oranje-donker); }
-
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: var(--zwart);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.88rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: 1.5px solid var(--zwart);
-      padding: 10px 24px;
-      cursor: pointer;
-      text-decoration: none;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 12px 100%);
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-secondary:hover { border-color: var(--oranje); color: var(--oranje); }
-
-    .hero-note {
-      font-size: 0.88rem;
-      color: var(--urgentie);
-      margin-top: 10px;
-      font-weight: 600;
+    .hero-meta-item {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    /* ═══════════════════════════ USP BAR ═══════════════════════════ */
-    .usp-bar {
-      max-width: 960px;
-      margin: 0 auto 48px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1px;
-      background: var(--kaart-rand);
-      border: 1px solid var(--kaart-rand);
+    .hero-meta-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
     }
-    .usp-item {
-      background: var(--wit);
-      padding: 18px 20px;
+
+    /* FORM */
+
+    .hero-main-right {
+      border-radius: 20px;
+      background: radial-gradient(circle at top right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.92));
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
       gap: 12px;
     }
-    .usp-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      line-height: 1;
-      margin-top: 2px;
-    }
-    .usp-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 2px;
-    }
-    .usp-sub {
-      font-size: 0.8rem;
-      color: var(--tekst-zacht);
-      line-height: 1.4;
-    }
 
-    /* ═══════════════════════════ SHIRTS ═══════════════════════════ */
-    #shirts {
-      max-width: 960px;
-      margin: 0 auto 52px;
-    }
-
-    .section-header {
-      margin-bottom: 20px;
-    }
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 4px;
-    }
-    .section-subtitle {
-      font-size: 0.88rem;
-      color: var(--urgentie);
-      font-weight: 600;
-    }
-
-    .shirts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 22px;
-    }
-
-    .shirt-card {
-      background: var(--wit);
-      border-radius: 12px;
-      border: 1px solid var(--kaart-rand);
-      padding: 16px 16px 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: box-shadow 0.25s, transform 0.25s;
-    }
-    .shirt-card:hover {
-      box-shadow: 0 14px 36px rgba(0,0,0,0.1);
-      transform: translateY(-3px);
-    }
-
-    .shirt-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      display: block;
-      background: #fafafa;
-    }
-
-    .shirt-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .shirt-meta {
-      font-size: 0.82rem;
-      color: #888;
-      margin-bottom: 6px;
-    }
-
-    /* SEO: prijs als aparte elementen voor schema */
-    .shirt-price-row {
+    .form-header {
       display: flex;
-      align-items: baseline;
+      justify-content: space-between;
+      align-items: center;
       gap: 8px;
       margin-bottom: 4px;
     }
-    .shirt-price {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.4rem;
-      color: var(--oranje);
-    }
-    .shirt-vergelijk {
-      font-size: 0.8rem;
-      color: #aaa;
-      text-decoration: line-through;
-    }
-    .shirt-bespaar {
-      font-size: 0.78rem;
-      background: var(--oranje);
-      color: var(--wit);
-      padding: 1px 7px;
+
+    .form-title {
+      font-size: 14px;
       font-weight: 600;
-      border-radius: 3px;
+      color: #f9fafb;
     }
 
-    .shirt-status {
-      font-size: 0.83rem;
-      color: var(--urgentie);
-      margin-bottom: 10px;
-      font-weight: 600;
+    .form-subtitle {
+      font-size: 12px;
+      color: var(--text-soft);
     }
 
-    .shirt-card .btn-primary {
-      font-size: 0.82rem;
-      padding: 9px 18px;
+    .form-secure-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 11px;
+      color: #e5e7eb;
+      white-space: nowrap;
     }
 
-    /* ═══════════════════════════ WAAROM FAN-VERSIE ═══════════════════════════ */
-    #waarom {
-      max-width: 960px;
-      margin: 0 auto 52px;
-      background: var(--zwart);
-      border-radius: 12px;
-      padding: 32px 32px 36px;
-      color: var(--wit);
+    .form-secure-icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #22c55e, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ecfdf3;
+      font-size: 10px;
     }
 
-    #waarom .section-title { color: var(--wit); margin-bottom: 6px; }
-    #waarom .section-subtitle-wit {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-bottom: 24px;
-    }
-
-    .vergelijk-grid {
+    .form-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 9px;
     }
 
-    .vergelijk-kolom {
-      background: rgba(255,255,255,0.06);
-      border-radius: 8px;
-      padding: 20px;
-    }
-    .vergelijk-kolom.highlight {
-      background: rgba(255,85,0,0.15);
-      border: 1px solid rgba(255,85,0,0.35);
-    }
-    .vergelijk-kolom h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
-      color: #ccc;
-    }
-    .vergelijk-kolom.highlight h3 { color: var(--oranje); }
-
-    .vergelijk-prijs {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-      color: #fff;
-    }
-    .vergelijk-kolom:not(.highlight) .vergelijk-prijs { color: #777; }
-
-    .vergelijk-list {
-      list-style: none;
-      font-size: 0.88rem;
-      color: #bbb;
-      line-height: 1.8;
-    }
-    .vergelijk-list li::before { content: "· "; color: #666; }
-    .vergelijk-kolom.highlight .vergelijk-list li::before { content: "✓ "; color: var(--oranje); }
-    .vergelijk-kolom.highlight .vergelijk-list { color: #ddd; }
-
-    /* ═══════════════════════════ OVER ONS ═══════════════════════════ */
-    #over-ons {
-      max-width: 960px;
-      margin: 0 auto 40px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 12px;
-      border: 1px solid var(--kaart-rand);
-      padding: 24px 26px 26px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 9px;
     }
 
-    .over-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 6px;
-    }
-    .over-subtitle {
-      font-size: 0.92rem;
-      color: #777;
-      margin-bottom: 10px;
-      font-style: italic;
-    }
-    .over-text {
-      font-size: 0.95rem;
-      color: var(--tekst-zacht);
-      line-height: 1.75;
+    @media (max-width: 600px) {
+      .form-row-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
-    /* ═══════════════════════════ FAQ (SEO rich content) ═══════════════════════════ */
-    #faq {
-      max-width: 960px;
-      margin: 0 auto 52px;
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    .faq-list { margin-top: 16px; }
-
-    details {
-      border-bottom: 1px solid var(--kaart-rand);
-    }
-    details:first-of-type { border-top: 1px solid var(--kaart-rand); }
-
-    summary {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      padding: 14px 4px;
-      cursor: pointer;
-      list-style: none;
+    .form-label {
+      font-size: 12px;
+      color: #e5e7eb;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    summary::after {
-      content: "+";
-      font-size: 1.3rem;
-      color: var(--oranje);
-      font-weight: 400;
-      flex-shrink: 0;
-      margin-left: 12px;
-    }
-    details[open] summary::after { content: "−"; }
 
-    .faq-antwoord {
-      font-size: 0.92rem;
-      color: var(--tekst-zacht);
-      line-height: 1.7;
-      padding: 0 4px 16px;
+    .form-label span {
+      font-weight: 500;
     }
 
-    /* ═══════════════════════════ FOOTER ═══════════════════════════ */
-    footer {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #aaa;
-      padding: 24px 16px 36px;
-      border-top: 1px solid var(--kaart-rand);
-    }
-    footer a { color: #888; text-decoration: none; }
-    footer a:hover { color: var(--oranje); }
-
-    /* ═══════════════════════════ RESPONSIVE ═══════════════════════════ */
-    @media (max-width: 720px) {
-      nav { padding: 0 18px; }
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 0.75rem; }
-      main { padding: 86px 16px 32px; }
-      .vergelijk-grid { grid-template-columns: 1fr; }
-      #waarom { padding: 24px 20px 28px; }
+    .form-label small {
+      font-size: 11px;
+      color: var(--text-muted);
     }
 
-    @media (max-width: 480px) {
-      .nav-links { display: none; }
+    .input-shell {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-prefix {
+      position: absolute;
+      left: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.92);
+      color: #e5e7eb;
+      font-size: 13px;
+      padding: 9px 11px;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), transform 0.12s ease-out;
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.65);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .input-with-prefix {
+      padding-left: 22px;
+    }
+
+    .form-textarea {
+      border-radius: 14px;
+      resize: vertical;
+      min-height: 52px;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: rgba(248, 113, 22, 0.95);
+      box-shadow:
+        0 0 0 1px rgba(251, 146, 60, 0.85),
+        0 18px 45px rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .form-inline-note {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 6px;
+    }
+
+    .form-inline-note small {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .form-inline-tag {
+      font-size: 11px;
+      color: #f97316;
+      background: rgba(248, 113, 22, 0.16);
+      border-radius: 999px;
+      padding: 3px 7px;
+      border: 1px solid rgba(248, 113, 22, 0.65);
+      white-space: nowrap;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      color: #111827;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      box-shadow:
+        0 18px 60px rgba(248, 113, 22, 0.4),
+        0 0 0 1px rgba(248, 250, 252, 0.04);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-position 0.2s ease-out;
+      background-size: 150%;
+      background-position: 0% 50%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background-position: 100% 50%;
+      box-shadow:
+        0 20px 70px rgba(248, 113, 22, 0.55),
+        0 0 0 1px rgba(248, 250, 252, 0.08);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow:
+        0 12px 35px rgba(248, 113, 22, 0.4),
+        0 0 0 1px rgba(248, 250, 252, 0.08);
+    }
+
+    .btn-primary span {
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary-sub {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #fef3c7;
+    }
+
+    .btn-primary-pill {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.94);
+      color: #fed7aa;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-primary-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .form-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      justify-content: space-between;
+    }
+
+    .form-trust-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      max-width: 260px;
+    }
+
+    .form-trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 4px 8px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.92);
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
+    .trust-chip-dot-green {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .trust-chip-icon {
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #e5e7eb;
+    }
+
+    /* RIGHT COLUMN: INFO + USP + FAQ SHORT */
+
+    .hero-right-shell {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-comparison-card {
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(17, 24, 39, 0.94));
+      padding: 14px 15px 13px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 16px 50px rgba(15, 23, 42, 0.8);
+    }
+
+    .comparison-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .comparison-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .comparison-label {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #bfdbfe;
+    }
+
+    .comparison-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .comparison-pill {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(251, 146, 60, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      color: #fed7aa;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .comparison-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 9px;
+    }
+
+    @media (max-width: 600px) {
+      .comparison-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .comparison-col {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: 9px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .comparison-col-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .comparison-col-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .comparison-col-price {
+      font-size: 12px;
+      font-weight: 600;
+      color: #f97316;
+    }
+
+    .comparison-col-body {
+      font-size: 12px;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .comparison-list {
+      margin-top: 3px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .comparison-list li {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .comparison-li-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+
+    .comparison-highlight-row {
+      margin-top: 7px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 11px;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .comparison-highlight-main {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .comparison-highlight-badge {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.16);
+      border: 1px solid rgba(22, 163, 74, 0.8);
+      color: #bbf7d0;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .comparison-highlight-secondary {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* MINI FAQ / EXTRA INFO */
+
+    .hero-extra-card {
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 12px 14px 11px;
+      box-shadow: 0 14px 45px rgba(15, 23, 42, 0.8);
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .hero-extra-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .extra-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .extra-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #bfdbfe;
+    }
+
+    .extra-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .extra-text {
+      font-size: 12px;
+      color: var(--text-soft);
+      line-height: 1.55;
+    }
+
+    .extra-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 2px;
+    }
+
+    .extra-list li {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .extra-li-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+
+    .extra-highlight {
+      margin-top: 3px;
+      font-size: 11px;
+      color: #f97316;
+    }
+
+    /* PAGE FOOTER */
+
+    .page-footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding-top: 10px;
+    }
+
+    .page-footer-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .page-footer a {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .page-footer a:hover {
+      color: #e5e7eb;
     }
   </style>
 </head>
 <body>
-
-  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
-  <nav aria-label="Hoofdnavigatie">
-    <a class="logo" href="/" aria-label="VoetbalshirtsNL homepage">VOETBALSHIRTS<span>NL</span></a>
-    <ul class="nav-links" role="list">
-      <li><a href="#shirts">Shirts</a></li>
-      <li><a href="bestellen.html">Pre-order</a></li>
-      <li><a href="gripsokken.html">Gripsokken</a></li>
-      <li><a href="over-ons.html">Over ons</a></li>
-    </ul>
-  </nav>
-
-  <main>
-
-    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-    <section class="hero" aria-labelledby="hero-heading">
-
-      <div class="wk-banner" role="status">
-        <span class="dot" aria-hidden="true"></span>
-        WK 2026 — VS, Mexico & Canada — Juni 2026
-      </div>
-
-      <div class="hero-badge" aria-hidden="true">Oranje fan shirt</div>
-
-      <h1 class="hero-title" id="hero-heading">
-        Fan-versie <span>voetbalshirt 2026</span>
-      </h1>
-
-      <p class="hero-subtitle">
-        Thuisshirt en uitshirt van het Nederlands elftal – voor een scherpe prijs.
-      </p>
-
-      <p class="hero-text">
-        Comfortabele fan-versie van het shirt dat de spelers dragen. Ideaal om WK-wedstrijden te kijken,
-        te trainen of gewoon trots in het oranje rond te lopen. Beschikbaar in maten S t/m XL,
-        voor kinderen en volwassenen.
-      </p>
-
-      <!-- Prijsvergelijking: krachtige USP vs. officieel Nike-shirt -->
-      <div class="prijs-vergelijking" role="note" aria-label="Prijsvergelijking">
-        <div>
-          <div class="oud">Officieel Nike-shirt: €109,99</div>
-          <div style="font-size:0.75rem;color:#bbb;">vs. onze fan-versie:</div>
-        </div>
-        <div class="nieuw">€24,99</div>
-        <div class="label">
-          Zelfde look,<br>veel betaalbaardere prijs
-        </div>
-      </div>
-
-      <p class="hero-note" role="alert">
-        ⚠️ Eerste voorraad uitverkocht — pre‑order nu voor de volgende levering.
-      </p>
-
-      <div class="hero-actions" style="margin-top:12px;">
-        <a href="bestellen.html" class="btn-primary">Plaats een pre‑order</a>
-        <a href="gripsokken.html" class="btn-secondary">Bekijk gripsokken</a>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ USP BAR ═══════════════════════════ -->
-    <section class="usp-bar" aria-label="Onze voordelen">
-      <div class="usp-item">
-        <div class="usp-icon" aria-hidden="true">💶</div>
-        <div>
-          <div class="usp-label">Betaalbaar</div>
-          <div class="usp-sub">Slechts €24,99 — 77% goedkoper dan officieel</div>
-        </div>
-      </div>
-      <div class="usp-item">
-        <div class="usp-icon" aria-hidden="true">✅</div>
-        <div>
-          <div class="usp-label">Kwaliteit getest</div>
-          <div class="usp-sub">Alleen goed zittende, netjes afgewerkte shirts</div>
-        </div>
-      </div>
-      <div class="usp-item">
-        <div class="usp-icon" aria-hidden="true">📦</div>
-        <div>
-          <div class="usp-label">Pre-order</div>
-          <div class="usp-sub">Persoonlijke bevestiging, direct verzonden na levering</div>
-        </div>
-      </div>
-      <div class="usp-item">
-        <div class="usp-icon" aria-hidden="true">🇳🇱</div>
-        <div>
-          <div class="usp-label">Nederlands</div>
-          <div class="usp-sub">Kleine webshop, persoonlijk contact</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════ ONZE SHIRTS ═══════════════════════════ -->
-    <section id="shirts" aria-labelledby="shirts-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="shirts-heading">Onze shirts</h2>
-        <p class="section-subtitle">Huidige voorraad uitverkocht — pre‑order hieronder voor de volgende levering.</p>
-      </div>
-
-      <div class="shirts-grid">
-
-        <!-- Shirt 1: Thuisshirt -->
-        <article class="shirt-card" itemscope itemtype="https://schema.org/Product">
-          <img
-            src="oranje-shirt.jpg"
-            alt="Fan-versie oranje thuisshirt Nederlands elftal WK 2026 — voorkant"
-            itemprop="image"
-            width="540" height="480"
-            loading="lazy"
-          />
-          <h3 class="shirt-title" itemprop="name">Oranje thuisshirt WK 2026</h3>
-          <p class="shirt-meta" itemprop="description">Fan-versie · Thuis · Oranje · Maat S t/m XL</p>
-          <div class="shirt-price-row">
-            <span class="shirt-price" itemprop="price" content="24.99">€24,99</span>
-            <span class="shirt-vergelijk">€109,99</span>
-            <span class="shirt-bespaar">−77%</span>
+  <div class="page-shell">
+    <div class="page-inner">
+      <!-- TOP BADGE -->
+      <div class="top-badge-row">
+        <div class="top-badge">
+          <div class="top-badge-pill">Pre‑order Oranje fan‑shirt</div>
+          <div class="top-badge-text">
+            <span class="top-badge-text-dot"></span>
+            Nieuwste levering verwacht vóór start WK 2026
           </div>
-          <p class="shirt-status">Uitverkocht — nu pre‑order mogelijk</p>
-          <a href="bestellen.html" class="btn-primary" aria-label="Pre-order het oranje thuisshirt WK 2026">Pre‑order thuisshirt</a>
-        </article>
+        </div>
+      </div>
 
-        <!-- Shirt 2: Uitshirt -->
-        <article class="shirt-card" itemscope itemtype="https://schema.org/Product">
-          <img
-            src="wit-shirt.jpg"
-            alt="Fan-versie wit uitshirt Nederlands elftal WK 2026 — voorkant"
-            itemprop="image"
-            width="540" height="480"
-            loading="lazy"
-          />
-          <h3 class="shirt-title" itemprop="name">Wit uitshirt WK 2026</h3>
-          <p class="shirt-meta" itemprop="description">Fan-versie · Uit · Wit met oranje · Maat S t/m XL</p>
-          <div class="shirt-price-row">
-            <span class="shirt-price" itemprop="price" content="24.99">€24,99</span>
-            <span class="shirt-vergelijk">€109,99</span>
-            <span class="shirt-bespaar">−77%</span>
+      <!-- HERO SHELL -->
+      <div class="hero-shell">
+        <!-- LEFT COLUMN -->
+        <div class="hero-left">
+          <div class="hero-title-block">
+            <div class="hero-kicker">
+              <span class="hero-kicker-dot"></span>
+              Oranje fan‑shirt WK 2026
+            </div>
+            <h1 class="hero-title">
+              Scoor jouw <span>fan‑shirt</span> voordat het WK begint.
+            </h1>
+            <p class="hero-subtitle">
+              Thuisshirt en uitshirt van het Nederlands elftal – fan‑versie, comfortabel om te dragen en een stuk betaalbaarder dan het officiële shirt.
+            </p>
           </div>
-          <p class="shirt-status">Uitverkocht — nu pre‑order mogelijk</p>
-          <a href="bestellen.html" class="btn-primary" aria-label="Pre-order het witte uitshirt WK 2026">Pre‑order uitshirt</a>
-        </article>
 
-      </div>
-    </section>
+          <div class="hero-usp-row">
+            <div class="hero-usp-pill">
+              <div class="hero-usp-icon-check">✓</div>
+              <span>Fan‑versie: van €109,99 voor €24,99</span>
+            </div>
+            <div class="hero-usp-pill">
+              <div class="hero-usp-icon-check">✓</div>
+              <span>Persoonlijke bevestiging via e‑mail</span>
+            </div>
+            <div class="hero-usp-pill">
+              <div class="hero-usp-icon-check">✓</div>
+              <span>Kleine Nederlandse webshop</span>
+            </div>
+          </div>
 
-    <!-- ═══════════════════════════ WAAROM FAN-VERSIE ═══════════════════════════ -->
-    <section id="waarom" aria-labelledby="waarom-heading">
-      <div class="section-title" id="waarom-heading" style="color:white;margin-bottom:6px;">Fan-versie vs. officieel shirt</div>
-      <p class="section-subtitle-wit">Waarom kiezen duizenden fans voor een fan-versie voetbalshirt?</p>
+          <div class="hero-main-card">
+            <div class="hero-main-inner">
+              <!-- INFO LEFT -->
+              <div class="hero-main-left">
+                <div class="hero-info-eyebrow">
+                  Hoe werkt de pre‑order?
+                  <div class="hero-info-eyebrow-line"></div>
+                </div>
+                <div class="hero-info-title">
+                  Eerst je maat doorgeven, daarna persoonlijke bevestiging.
+                </div>
+                <p class="hero-info-body">
+                  Vul hieronder je maat en gegevens in. Wij controleren handmatig je aanvraag en bevestigen je pre‑order persoonlijk per e‑mail, inclusief verwachte levertijd en betaalinstructies.
+                </p>
 
-      <div class="vergelijk-grid">
-        <div class="vergelijk-kolom">
-          <h3>Officieel Nike-shirt</h3>
-          <div class="vergelijk-prijs">€109,99</div>
-          <ul class="vergelijk-list">
-            <li>Dri-FIT technologie</li>
-            <li>Officieel merklogo</li>
-            <li>Spelersfit (strak, klein vallen)</li>
-            <li>Ideaal voor op het veld</li>
-          </ul>
+                <div class="hero-info-highlight">
+                  <span class="hero-info-badge">Let op</span>
+                  Eerste voorraad is volledig uitverkocht; met je pre‑order reserveren we jouw shirt in de volgende levering.
+                </div>
+
+                <div class="hero-meta-row">
+                  <div class="hero-meta-item">
+                    <span class="hero-meta-dot"></span>
+                    Gemiddeld binnen 24 uur reactie op je aanvraag
+                  </div>
+                  <div class="hero-meta-item">
+                    <span class="hero-meta-dot"></span>
+                    Verwachte levering: vóór start WK juni 2026
+                  </div>
+                </div>
+              </div>
+
+              <!-- FORM RIGHT -->
+              <form class="hero-main-right">
+                <div class="form-header">
+                  <div>
+                    <div class="form-title">Pre‑order formulier</div>
+                    <div class="form-subtitle">
+                      Geen automatische betaling – wij bevestigen altijd eerst je aanvraag.
+                    </div>
+                  </div>
+                  <div class="form-secure-pill">
+                    <span class="form-secure-icon">🔒</span>
+                    Veilig & persoonlijk
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-row-2">
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Voornaam</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-input"
+                        name="first_name"
+                        placeholder="Bijv. Jesse"
+                        required
+                      />
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Achternaam</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-input"
+                        name="last_name"
+                        placeholder="Bijv. de Vries"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="form-label">
+                      <span>E‑mail</span>
+                      <small>Voor bevestiging & updates</small>
+                    </label>
+                    <input
+                      type="email"
+                      class="form-input"
+                      name="email"
+                      placeholder="jij@example.nl"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-row-2">
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Telefoonnummer</span>
+                        <small>Optioneel, handig bij vragen</small>
+                      </label>
+                      <div class="input-shell">
+                        <span class="input-prefix">+31</span>
+                        <input
+                          type="tel"
+                          class="form-input input-with-prefix"
+                          name="phone"
+                          placeholder="6 12 34 56 78"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Voorkeur: thuisshirt of uitshirt?</span>
+                      </label>
+                      <select class="form-select" name="shirt_type" required>
+                        <option value="" disabled selected>Kies je shirt</option>
+                        <option value="home">Thuisshirt – oranje</option>
+                        <option value="away">Uitshirt – variant</option>
+                        <option value="both">Beide shirts</option>
+                        <option value="other">Weet ik nog niet / overleg</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row-2">
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Maat</span>
+                        <small>S t/m XL – volwassenen & kids</small>
+                      </label>
+                      <select class="form-select" name="size" required>
+                        <option value="" disabled selected>Kies je maat</option>
+                        <option value="kids-128">Kindermaat 128</option>
+                        <option value="kids-140">Kindermaat 140</option>
+                        <option value="kids-152">Kindermaat 152</option>
+                        <option value="kids-164">Kindermaat 164</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label">
+                        <span>Aantal shirts</span>
+                      </label>
+                      <input
+                        type="number"
+                        class="form-input"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        value="1"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="form-label">
+                      <span>Opmerking</span>
+                      <small>Bijv. naam & rugnummer, twijfel over maat</small>
+                    </label>
+                    <textarea
+                      class="form-textarea"
+                      name="note"
+                      placeholder="Laat gerust weten of je een naam/rugnummer wilt, of als je twijfelt tussen twee maten."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">
+                    <div>
+                      <span>Pre‑order aanvragen</span>
+                      <div class="btn-primary-sub">
+                        Nog geen betaling – je aanvraag wordt eerst bevestigd
+                      </div>
+                    </div>
+                    <div class="btn-primary-pill">
+                      <span class="btn-primary-pill-dot"></span>
+                      €24,99 per fan‑shirt
+                    </div>
+                  </button>
+
+                  <div class="form-trust-row">
+                    <div class="form-trust-note">
+                      We sturen je geen spam. Je gegevens worden alleen gebruikt om je pre‑order te bevestigen en je eventueel een update te sturen over de levering.
+                    </div>
+                    <div class="form-trust-badges">
+                      <div class="trust-chip">
+                        <span class="trust-chip-dot-green"></span>
+                        Kleine Nederlandse webshop
+                      </div>
+                      <div class="trust-chip">
+                        <span class="trust-chip-icon">✓</span>
+                        Persoonlijke klantenservice
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="vergelijk-kolom highlight">
-          <h3>Fan-versie — VoetbalshirtsNL</h3>
-          <div class="vergelijk-prijs">€24,99</div>
-          <ul class="vergelijk-list">
-            <li>Dezelfde look & kleuren</li>
-            <li>Comfortabele relaxed fit</li>
-            <li>Ideaal voor op de tribune, thuis kijken of casual dragen</li>
-            <li>77% goedkoper</li>
-            <li>Perfect cadeau voor kids</li>
-          </ul>
+
+        <!-- RIGHT COLUMN -->
+        <div class="hero-right-shell">
+          <div class="hero-comparison-card">
+            <div class="comparison-header">
+              <div class="comparison-title-block">
+                <div class="comparison-label">Waarom fan‑shirt?</div>
+                <div class="comparison-title">
+                  Dezelfde Oranje‑beleving, minder betalen.
+                </div>
+              </div>
+              <div class="comparison-pill">
+                <span class="comparison-pill-dot"></span>
+                Meest gekozen door fans
+              </div>
+            </div>
+
+            <div class="comparison-grid">
+              <div class="comparison-col">
+                <div class="comparison-col-header">
+                  <div class="comparison-col-title">Officieel Nike‑shirt</div>
+                  <div class="comparison-col-price">€109,99</div>
+                </div>
+                <div class="comparison-col-body">
+                  Met officieel merklogo en Dri‑FIT technologie, vooral interessant als je het shirt echt als verzamelitem wilt of officiële kwaliteit belangrijk vindt.
+                </div>
+                <ul class="comparison-list">
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Origineel merk, officiële badges
+                  </li>
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Hogere prijs per shirt
+                  </li>
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Minder fijn voor dagelijks dragen
+                  </li>
+                </ul>
+              </div>
+
+              <div class="comparison-col">
+                <div class="comparison-col-header">
+                  <div class="comparison-col-title">Fan‑versie voetbalshirt</div>
+                  <div class="comparison-col-price">€24,99</div>
+                </div>
+                <div class="comparison-col-body">
+                  Zelfde kleuren en design als Oranje, maar gemaakt van comfortabel materiaal en een stuk vriendelijker geprijsd. Ideaal voor wedstrijden kijken of casual dragen.
+                </div>
+                <ul class="comparison-list">
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Comfortabel voor kids en volwassenen
+                  </li>
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Betaalbaar cadeau of supporter‑outfit
+                  </li>
+                  <li>
+                    <span class="comparison-li-dot"></span>
+                    Prima kwaliteit voor tribune & thuis
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="comparison-highlight-row">
+              <div class="comparison-highlight-main">
+                <div class="comparison-highlight-badge">Tip van de fans</div>
+                <div>
+                  De meeste klanten kiezen voor de fan‑versie, zodat het hele gezin een shirt kan dragen tijdens het WK.
+                </div>
+              </div>
+              <div class="comparison-highlight-secondary">
+                Twijfel je? Laat het weten bij je aanvraag – we denken graag mee.
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-extra-card">
+            <div class="extra-col">
+              <div class="extra-label">Over VoetbalshirtsNL</div>
+              <div class="extra-title">Kleine Nederlandse webshop, grote Oranje‑liefde.</div>
+              <div class="extra-text">
+                VoetbalshirtsNL is een kleine webshop voor fanatieke Oranje‑supporters. Geen groot platform, maar direct contact met iemand die zelf ook met spanning naar het WK toeleeft.
+              </div>
+              <ul class="extra-list">
+                <li>
+                  <span class="extra-li-dot"></span>
+                  We selecteren alleen fan‑shirts die goed zitten en netjes afgewerkt zijn.
+                </li>
+                <li>
+                  <span class="extra-li-dot"></span>
+                  Je krijgt altijd een persoonlijke bevestiging van je bestelling.
+                </li>
+                <li>
+                  <span class="extra-li-dot"></span>
+                  Twijfel over maat of bedrukking? Stuur gerust een korte toelichting mee.
+                </li>
+              </ul>
+            </div>
+
+            <div class="extra-col">
+              <div class="extra-label">Levering & voorraad</div>
+              <div class="extra-title">Uitverkocht – nu pre‑order mogelijk.</div>
+              <div class="extra-text">
+                De huidige voorraad is volledig uitverkocht. Met je pre‑order reserveren we jouw maat in de volgende levering, zodat je je shirt op tijd binnen hebt vóór de eerste WK‑wedstrijd.
+              </div>
+              <ul class="extra-list">
+                <li>
+                  <span class="extra-li-dot"></span>
+                  Verwachte nieuwe levering: vóór start WK juni 2026.
+                </li>
+                <li>
+                  <span class="extra-li-dot"></span>
+                  Pre‑order klanten worden als eerste geholpen bij binnenkomst van de nieuwe voorraad.
+                </li>
+                <li>
+                  <span class="extra-li-dot"></span>
+                  We houden je per e‑mail op de hoogte als de planning verandert.
+                </li>
+              </ul>
+              <div class="extra-highlight">
+                Twijfel je tussen twee maten? Kies de grootste maat, of zet je twijfels bij de opmerkingen – dan kijken we met je mee.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- ═══════════════════════════ OVER ONS ═══════════════════════════ -->
-    <section id="over-ons" aria-labelledby="overons-heading">
-      <h2 class="over-title" id="overons-heading">Over ons</h2>
-      <p class="over-subtitle">VoetbalshirtsNL is een kleine Nederlandse webshop voor fanatieke Oranje-supporters.</p>
-      <p class="over-text">
-        We selecteren alleen fan-versies die goed zitten, netjes afgewerkt zijn en betaalbaar blijven.
-        Bestellen doen we via pre‑orders: je geeft je maat door, wij bevestigen je pre‑order persoonlijk
-        en sturen je shirt direct na binnenkomst van de nieuwe levering op. Zo houden we de prijs laag
-        en de service persoonlijk. Geen groot platform, wel eerlijk en snel.
-      </p>
-    </section>
-
-    <!-- ═══════════════════════════ FAQ (SEO: long-tail + rich snippet) ═══════════════════════════ -->
-    <section id="faq" aria-labelledby="faq-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="faq-heading">Veelgestelde vragen</h2>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary>Wat is het verschil tussen een fan-versie en een officieel voetbalshirt?</summary>
-          <p class="faq-antwoord">
-            Een officieel Nike-shirt (ook wel replica of spelersversie) heeft het officiële merklogo, geavanceerde
-            Dri-FIT technologie en kost €109,99. Een fan-versie heeft dezelfde kleuren en hetzelfde design,
-            maar is gemaakt van comfortabeler materiaal voor dagelijks gebruik — en kost maar €24,99.
-            Ideaal als je het shirt wil dragen voor wedstrijden kijken, casual, of als cadeau voor kinderen.
-          </p>
-        </details>
-        <details>
-          <summary>Hoe werkt een pre-order bij VoetbalshirtsNL?</summary>
-          <p class="faq-antwoord">
-            Je geeft via onze bestelformulier je maat en gegevens door. Wij bevestigen je pre-order persoonlijk
-            per e-mail. Zodra de nieuwe levering binnenkomt, sturen we je shirt direct op. Zo houden we
-            de prijs laag en weet je zeker dat je een shirt krijgt zodra ze beschikbaar zijn.
-          </p>
-        </details>
-        <details>
-          <summary>Welke maten zijn beschikbaar?</summary>
-          <p class="faq-antwoord">
-            De fan-versie shirts zijn beschikbaar in maten S t/m XL, voor zowel kinderen als volwassenen.
-            Let op: de shirts vallen normaal van maat. Twijfel je tussen twee maten? Kies dan de grotere maat.
-          </p>
-        </details>
-        <details>
-          <summary>Kan ik het shirt laten bedrukken met mijn eigen naam?</summary>
-          <p class="faq-antwoord">
-            Neem contact met ons op via de bestelformulier. We kijken samen naar de mogelijkheden voor
-            bedrukking met eigen naam en rugnummer. Stuur ons een berichtje en we komen snel bij je terug.
-          </p>
-        </details>
-        <details>
-          <summary>Wanneer ontvang ik mijn shirt?</summary>
-          <p class="faq-antwoord">
-            We verwachten de volgende levering voor de start van het WK in juni 2026. Zodra de shirts
-            binnenkomen, worden ze direct verzonden. Pre-order klanten worden als eerste bediend.
-          </p>
-        </details>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer>
-    <p>© 2026 VoetbalshirtsNL · <a href="over-ons.html">Over ons</a> · <a href="bestellen.html">Pre-order</a> · <a href="gripsokken.html">Gripsokken</a></p>
-    <p style="margin-top:6px; color:#ccc;">Fan-versie voetbalshirts zijn geen officiële Nike-producten. VoetbalshirtsNL is niet gelieerd aan Nike of de KNVB.</p>
-  </footer>
-
-  <!-- ═══════════════════════════ FAQ SCHEMA ═══════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Wat is het verschil tussen een fan-versie en een officieel voetbalshirt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Een officieel Nike-shirt kost €109,99 en heeft geavanceerde Dri-FIT technologie. Een fan-versie heeft dezelfde kleuren en design, maar is van comfortabeler materiaal voor dagelijks gebruik en kost maar €24,99. Ideaal voor wedstrijden kijken, casual dragen of als cadeau voor kinderen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hoe werkt een pre-order bij VoetbalshirtsNL?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Je geeft via ons bestelformulier je maat en gegevens door. Wij bevestigen je pre-order persoonlijk per e-mail en sturen je shirt direct na binnenkomst van de nieuwe levering op."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welke maten zijn beschikbaar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "De fan-versie shirts zijn beschikbaar in maten S t/m XL, voor zowel kinderen als volwassenen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wanneer ontvang ik mijn shirt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We verwachten de volgende levering voor de start van het WK in juni 2026. Pre-order klanten worden als eerste bediend."
-        }
-      }
-    ]
-  }
-  </script>
-
+      <!-- FOOTER -->
+      <footer class="page-footer">
+        <div>© 2026 VoetbalshirtsNL – fan‑shirts voor Oranje‑supporters.</div>
+        <div class="page-footer-links">
+          <a href="#privacy">Privacy</a>
+          <a href="#voorwaarden">Voorwaarden</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
