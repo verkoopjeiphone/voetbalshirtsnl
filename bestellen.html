@@ -257,6 +257,11 @@
         </div>
 
         <div class="form-row">
+          <label for="telefoon" class="form-label">06-nummer</label>
+          <input id="telefoon" name="telefoon" type="tel" required class="form-input" placeholder="06-12345678" autocomplete="tel"/>
+        </div>
+
+        <div class="form-row">
           <label for="adres" class="form-label">Adres</label>
           <input id="adres" name="adres" type="text" required class="form-input" placeholder="Straat + huisnummer" autocomplete="street-address"/>
         </div>
@@ -324,7 +329,12 @@
     }
 
     document.querySelectorAll('.shirt-card').forEach(card => {
-      card.addEventListener('click', () => setActive(card));
+      card.addEventListener('click', () => {
+        setActive(card);
+        if (window.innerWidth < 700) {
+          formBlock.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -334,11 +344,11 @@
     });
 
     function buildWA() {
-      const vals = ['naam','email','adres','postcode','maat'].map(id =>
+      const vals = ['naam','email','telefoon','adres','postcode','maat'].map(id =>
         document.getElementById(id).value.trim()
       );
       const shirt = shirtSelect.value;
-      const labels = ['Naam','Email','Adres','Postcode','Maat'];
+      const labels = ['Naam','Email','06-nummer','Adres','Postcode','Maat'];
       let text = 'Bestelling fan-versie shirt%0A%0A';
       vals.forEach((v,i) => {
         text += labels[i] + ': ' + encodeURIComponent(v) + '%0A';
@@ -365,6 +375,9 @@
           headers: { Accept: 'application/json' }
         });
         if (res.ok) {
+          // automatisch WhatsApp-bericht openen na succesvolle verzending
+          window.open(buildWA(), '_blank');
+
           formStatus.className = 'form-status succes';
           formStatus.textContent = 'Bestelling verstuurd! Je ontvangt een bevestiging per e-mail.';
           e.target.reset();
