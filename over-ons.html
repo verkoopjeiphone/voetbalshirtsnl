@@ -45,264 +45,73 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --wit:#FDFBF6;--zwart:#18140F;--oranje:#E8541C;--oranje-dk:#c1420f;
-      --bruin:#6B4423;--bruin-lt:#EFDCB8;
-      --room:#F7EEDD;--kaart:#FFFFFF;
+    :root{
+      --bg:#ffffff;--bg-tint:#f5f5f7;--dark:#1d1d1f;
+      --ink:#1d1d1f;--ink-muted:#6e6e73;--ink-faint:#98989d;
+      --hairline:rgba(0,0,0,.08);--hairline-2:rgba(0,0,0,.12);
+      --accent:#E8541C;--accent-dk:#c1420f;--accent-tint:#fdece0;
+      --r-pill:980px;--r-lg:20px;--r-md:14px;--r-sm:10px;
+      --shadow-md:0 12px 28px rgba(0,0,0,.09);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body{font-family:"Nunito Sans",sans-serif;background:var(--room);color:var(--zwart);line-height:1.6;overflow-x:hidden}
-    h1,h2{font-family:"Fraunces",serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
     a{color:inherit}
-    @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none!important} }
-
-    /* MARQUEE TOPBALK */
-    .marquee{background:var(--zwart);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--zwart)}
-    .marquee-track{display:inline-block;padding:10px 0;animation:schuif 22s linear infinite}
-    .marquee-track span{display:inline-block;color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:0 22px}
-    .marquee-track span:nth-child(odd){color:var(--oranje)}
-    @keyframes schuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     /* NAV */
-    nav{
-      position: sticky;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content:space-between;
-      padding: 0 40px;
-      height: 76px;
-      background: var(--room);
-      border-bottom: 3px solid var(--zwart);
-    }
-    .logo{font-family:"Fraunces",serif;font-weight:900;font-size:1.8rem;letter-spacing:-.5px;text-decoration:none;color:var(--zwart)}
-    .logo span{color:var(--oranje)}
-    .nav-links{list-style:none;display:flex;gap:8px}
-    .nav-links a{display:inline-block;font-size:.9rem;font-weight:800;text-decoration:none;color:var(--zwart);text-transform:uppercase;letter-spacing:.03em;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s,transform .15s}
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"]{background:var(--zwart);color:var(--wit);transform:rotate(-2deg)}
-    .nav-toggle{
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-    .nav-toggle span{display:block;width:26px;height:3px;background:var(--zwart)}
-    .nav-right{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .btn-primary{
-      display:inline-block;background:var(--zwart);color:var(--wit);font-weight:800;font-size:.9rem;
-      text-transform:uppercase;letter-spacing:.03em;border:3px solid var(--zwart);padding:10px 22px;
-      cursor:pointer;text-decoration:none;border-radius:10px;box-shadow:4px 4px 0 var(--oranje-dk);
-      transition:transform .15s,box-shadow .15s;
-    }
-    .btn-primary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--oranje-dk)}
-    .whatsapp-nav-icon{
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: #25D366;
-      color: #fff;
-      border: 3px solid var(--zwart);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: transform 0.15s;
-    }
-    .whatsapp-nav-icon:hover{ transform: rotate(-8deg) scale(1.05); }
+    nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hairline)}
+    .logo{font-weight:700;font-size:1.28rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+    .logo span{color:var(--accent)}
+    .nav-links{list-style:none;display:flex;gap:6px}
+    .nav-links a{display:inline-block;font-size:.92rem;font-weight:500;text-decoration:none;color:var(--ink-muted);padding:8px 14px;border-radius:var(--r-pill);transition:background .15s,color .15s}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{background:var(--bg-tint);color:var(--ink)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink)}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .btn-primary{display:inline-flex;align-items:center;background:var(--ink);color:#fff;font-weight:600;font-size:.9rem;border:none;padding:9px 20px;cursor:pointer;text-decoration:none;border-radius:var(--r-pill);transition:background .15s}
+    .btn-primary:hover{background:#000}
+    .whatsapp-nav-icon{width:36px;height:36px;border-radius:50%;background:#25D366;color:#fff;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s}
+    .whatsapp-nav-icon:hover{transform:scale(1.06)}
 
-    main{
-      padding: 60px 40px 60px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .breadcrumb{font-size:.82rem;color:var(--zwart);opacity:.7;margin-bottom:18px;font-weight:700}
-    .breadcrumb a{color:var(--zwart);text-decoration:none}
-    .breadcrumb a:hover{color:var(--oranje-dk)}
+    main{padding:72px 32px 60px;max-width:960px;margin:0 auto}
+    .breadcrumb{font-size:.84rem;color:var(--ink-faint);margin-bottom:20px;font-weight:500}
+    .breadcrumb a{color:var(--ink-muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--ink)}
     .breadcrumb span{margin:0 6px}
-    .badge{
-      position: relative;
-      display: inline-block;
-      font-family: "Fraunces", serif;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      color: var(--wit);
-      background: var(--zwart);
-      padding: 7px 16px;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      transform: rotate(-3deg);
-    }
-    h1{
-      font-weight: 900;
-      font-size: clamp(2.6rem, 6vw, 4rem);
-      letter-spacing: -1.5px;
-      margin-bottom: 14px;
-      line-height: 1;
-      color: var(--zwart);
-    }
-    .subtitle{
-      font-size: 1.05rem;
-      color: var(--zwart);
-      opacity:.8;
-      margin-bottom: 34px;
-      max-width: 620px;
-      line-height: 1.65;
-      font-weight: 600;
-    }
-    .grid{
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 26px;
-      align-items: flex-start;
-    }
-    .card{
-      background: var(--kaart);
-      border-radius: 14px;
-      padding: 28px;
-      border: 3px solid var(--zwart);
-      box-shadow: 6px 6px 0 var(--zwart);
-    }
-    .card:nth-of-type(1){ transform: rotate(-1deg); }
-    .card:nth-of-type(2){ transform: rotate(1deg); }
-    .card h2{
-      font-weight: 800;
-      font-size: 1.4rem;
-      letter-spacing: -.3px;
-      margin-bottom: 12px;
-      color: var(--zwart);
-    }
-    .card p{
-      font-size: .97rem;
-      color: var(--zwart);
-      opacity: .85;
-      line-height: 1.75;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-    .card p:last-of-type{ margin-bottom: 0; }
-    .list{ list-style: none; margin-top: 6px; }
-    .list li{
-      font-size: .95rem;
-      color: var(--zwart);
-      opacity: .85;
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-    .list li::before{
-      content: "";
-      position: absolute;
-      left: 0; top: 8px;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--oranje);
-      border: 1.5px solid var(--zwart);
-    }
-    .highlight{
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 10px;
-      background: var(--bruin-lt);
-      border: 2px solid var(--zwart);
-      font-size: .9rem;
-      color: var(--zwart);
-      line-height: 1.6;
-      font-weight: 600;
-    }
-    .usp-bar{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 30px;
-    }
-    .usp-item{
-      background: var(--kaart);
-      border: 3px solid var(--zwart);
-      border-radius: 12px;
-      padding: 18px 16px;
-      text-align: center;
-      box-shadow: 4px 4px 0 var(--zwart);
-    }
-    .usp-item:nth-child(2n){ transform: rotate(-1.5deg); }
-    .usp-item strong{
-      display: block;
-      font-family: "Fraunces", serif;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: 4px;
-      color: var(--zwart);
-    }
-    .usp-item p{
-      font-size: .82rem;
-      color: var(--zwart);
-      opacity: .75;
-      line-height: 1.4;
-      font-weight: 600;
-    }
-    .back-link{
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 32px;
-      font-size: .92rem;
-      text-decoration: none;
-      color: var(--oranje-dk);
-      font-weight: 800;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      transition: gap .15s;
-    }
-    .back-link:hover{ gap: 10px; }
-    @media (max-width: 900px) {
-      nav{ padding: 0 20px; }
-      .nav-links{
-        display: none;
-        position: fixed;
-        top: 76px; left: 0; right: 0;
-        background: var(--room);
-        flex-direction: column;
-        gap: 0;
-        border-bottom: 3px solid var(--zwart);
-        z-index: 99;
-      }
-      .nav-links.open{ display: flex; }
-      .nav-links a{
-        padding: 14px 24px;
-        border-bottom: 1px solid var(--zwart);
-        display: block;
-        border-radius: 0;
-      }
-      .nav-toggle{ display: flex; }
-      .btn-primary{ display: none; }
-      main{ padding: 50px 20px 40px; }
-      .grid{ grid-template-columns: 1fr; }
-      .usp-bar{ grid-template-columns: 1fr; }
+    .eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+    h1{font-weight:700;font-size:clamp(2.4rem,5.5vw,3.4rem);letter-spacing:-.03em;margin-bottom:16px;line-height:1.08;color:var(--ink)}
+    .subtitle{font-size:1.05rem;color:var(--ink-muted);margin-bottom:44px;max-width:620px;line-height:1.65;font-weight:400}
+    .grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:20px;align-items:flex-start}
+    .card{background:var(--bg);border-radius:var(--r-lg);padding:30px;border:1px solid var(--hairline)}
+    .card h2{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;margin-bottom:14px;color:var(--ink)}
+    .card p{font-size:.98rem;color:var(--ink-muted);line-height:1.75;margin-bottom:14px;font-weight:400}
+    .card p:last-of-type{margin-bottom:0}
+    .list{list-style:none;margin-top:6px}
+    .list li{font-size:.96rem;color:var(--ink-muted);margin-bottom:12px;padding-left:22px;position:relative;line-height:1.5;font-weight:400}
+    .list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .highlight{margin-top:20px;padding:16px 18px;border-radius:var(--r-md);background:var(--bg-tint);font-size:.9rem;color:var(--ink-muted);line-height:1.6;font-weight:400}
+    .usp-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+    .usp-item{background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-md);padding:20px 16px;text-align:center}
+    .usp-item strong{display:block;font-size:.98rem;letter-spacing:-.01em;margin-bottom:5px;color:var(--ink);font-weight:600}
+    .usp-item p{font-size:.84rem;color:var(--ink-muted);line-height:1.4;font-weight:400}
+    .back-link{display:inline-flex;align-items:center;gap:6px;margin-top:40px;font-size:.94rem;text-decoration:none;color:var(--accent);font-weight:600;transition:gap .15s}
+    .back-link:hover{gap:10px;color:var(--accent-dk)}
+    @media (max-width:900px){
+      nav{padding:0 20px}
+      .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--hairline);z-index:99;padding:8px 0}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;display:block;border-radius:0}
+      .nav-toggle{display:flex}
+      .btn-primary{display:none}
+      main{padding:56px 20px 44px}
+      .grid{grid-template-columns:1fr}
+      .usp-bar{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
-      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
-    </div>
-  </div>
   <nav aria-label="Hoofdnavigatie">
     <a class="logo" href="index.html" aria-label="Kiekcam – naar homepage">Kiek<span>cam</span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu openen">
@@ -317,7 +126,7 @@
     <div class="nav-right">
       <a href="https://wa.me/31630576584" class="btn-primary" aria-label="Contact via WhatsApp">WhatsApp</a>
       <a href="https://wa.me/31630576584" class="whatsapp-nav-icon" aria-label="WhatsApp contact openen">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="white" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
       </a>
@@ -329,7 +138,7 @@
       <span aria-hidden="true">›</span>
       <span aria-current="page">Over ons</span>
     </nav>
-    <div class="badge">Over ons</div>
+    <span class="eyebrow">Over ons</span>
     <h1>Kiekcam in het kort</h1>
     <p class="subtitle">
       Kiekcam is ontstaan uit iets simpels: spontane momenten vastleggen, in retrostijl, zonder dat je hele maandbudget eraan opgaat.

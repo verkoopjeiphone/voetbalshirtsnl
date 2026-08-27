@@ -7,140 +7,113 @@
   <meta name="description" content="Bestel de Kiekcam retro digitale camera in wit, zwart, oranje of bruin voor €44,99. Snel en eenvoudig bestellen."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --wit:#FDFBF6;--zwart:#18140F;--oranje:#E8541C;--oranje-dk:#c1420f;
-      --bruin:#6B4423;--bruin-lt:#EFDCB8;
-      --room:#F7EEDD;--kaart:#FFFFFF;
+    :root{
+      --bg:#ffffff;--bg-tint:#f5f5f7;--dark:#1d1d1f;
+      --ink:#1d1d1f;--ink-muted:#6e6e73;--ink-faint:#98989d;
+      --hairline:rgba(0,0,0,.08);--hairline-2:rgba(0,0,0,.12);
+      --accent:#E8541C;--accent-dk:#c1420f;--accent-tint:#fdece0;
+      --wit:#F5F1E4;--zwart:#18140F;--oranje:#E8541C;--bruin:#6B4423;
+      --r-pill:980px;--r-lg:20px;--r-md:14px;--r-sm:10px;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.06);
+      --shadow-md:0 12px 28px rgba(0,0,0,.09);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:"Nunito Sans",sans-serif;background:var(--room);color:var(--zwart);min-height:100vh;overflow-x:hidden}
-    h1,.form-heading{font-family:"Fraunces",serif}
+    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
     a{color:inherit}
-    @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none!important} }
-
-    /* MARQUEE TOPBALK */
-    .marquee{background:var(--zwart);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--zwart)}
-    .marquee-track{display:inline-block;padding:10px 0;animation:schuif 22s linear infinite}
-    .marquee-track span{display:inline-block;color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:0 22px}
-    .marquee-track span:nth-child(odd){color:var(--oranje)}
-    @keyframes schuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    img{max-width:100%;display:block}
 
     /* NAV */
-    nav{
-      position:sticky; top:0; left:0; right:0; height:76px;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:0 40px;
-      background:var(--room);
-      border-bottom:3px solid var(--zwart);
-      z-index:100;
-    }
-    .logo{font-family:"Fraunces",serif;font-weight:900;font-size:1.8rem;letter-spacing:-.5px;text-decoration:none;color:var(--zwart)}
-    .logo span{color:var(--oranje)}
-    .nav-links{list-style:none;display:flex;gap:8px}
-    .nav-links a{display:inline-block;font-size:.9rem;font-weight:800;text-decoration:none;color:var(--zwart);text-transform:uppercase;letter-spacing:.03em;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s,transform .15s}
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"]{background:var(--zwart);color:var(--wit);transform:rotate(-2deg)}
+    nav{position:sticky;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hairline);z-index:100}
+    .logo{font-weight:700;font-size:1.28rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+    .logo span{color:var(--accent)}
+    .nav-links{list-style:none;display:flex;gap:6px}
+    .nav-links a{display:inline-block;font-size:.92rem;font-weight:500;text-decoration:none;color:var(--ink-muted);padding:8px 14px;border-radius:var(--r-pill);transition:background .15s,color .15s}
+    .nav-links a:hover,.nav-links a[aria-current="page"]{background:var(--bg-tint);color:var(--ink)}
     .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-    .nav-toggle span{display:block;width:26px;height:3px;background:var(--zwart)}
-    .nav-right{display:flex;align-items:center;gap:12px}
-    .nav-wa-btn{
-      display:inline-block;background:var(--zwart);color:var(--wit);font-weight:800;font-size:.9rem;
-      text-transform:uppercase;letter-spacing:.03em;border:3px solid var(--zwart);padding:10px 22px;
-      cursor:pointer;text-decoration:none;border-radius:10px;box-shadow:4px 4px 0 var(--oranje-dk);
-      transition:transform .15s,box-shadow .15s;
-    }
-    .nav-wa-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--oranje-dk)}
-    .whatsapp-nav-icon{
-      width:40px;height:40px;border-radius:50%;background:#25D366;color:#fff;border:3px solid var(--zwart);
-      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s;
-    }
-    .whatsapp-nav-icon:hover{transform:rotate(-8deg) scale(1.05)}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink)}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .nav-wa-btn{display:inline-flex;align-items:center;background:var(--ink);color:#fff;font-weight:600;font-size:.9rem;border:none;padding:9px 20px;cursor:pointer;text-decoration:none;border-radius:var(--r-pill);transition:background .15s}
+    .nav-wa-btn:hover{background:#000}
+    .whatsapp-nav-icon{width:36px;height:36px;border-radius:50%;background:#25D366;color:#fff;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s}
+    .whatsapp-nav-icon:hover{transform:scale(1.06)}
     @media(max-width:900px){
       nav{padding:0 20px}
-      .nav-links{display:none;position:fixed;top:76px;left:0;right:0;background:var(--room);flex-direction:column;gap:0;border-bottom:3px solid var(--zwart);z-index:99}
+      .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--hairline);z-index:99;padding:8px 0}
       .nav-links.open{display:flex}
-      .nav-links a{padding:14px 24px;border-bottom:1px solid var(--zwart);display:block;border-radius:0}
+      .nav-links a{padding:14px 24px;display:block;border-radius:0}
       .nav-toggle{display:flex}
       .nav-wa-btn{display:none}
     }
 
     /* HERO */
-    .hero{position:relative;overflow:hidden;padding:56px 32px 40px;text-align:center}
-    .hero::before{content:"";position:absolute;top:0;left:20%;width:60%;height:100%;background:var(--oranje);opacity:.14;border-radius:0 0 60% 60%;pointer-events:none}
-    .hero-badge{position:relative;display:inline-block;font-family:"Fraunces",serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wit);background:var(--zwart);padding:7px 16px;margin-bottom:18px;border-radius:6px;transform:rotate(-3deg)}
-    .hero h1{position:relative;font-weight:900;font-size:clamp(2.3rem,6.5vw,3.8rem);letter-spacing:-1.5px;line-height:1;margin-bottom:16px;color:var(--zwart)}
-    .hero h1 em{font-style:italic;color:var(--oranje-dk)}
-    .hero-sub{position:relative;font-size:.98rem;color:var(--zwart);opacity:.8;max-width:420px;margin:0 auto 18px;line-height:1.6;font-weight:600}
-    .price-tag{position:relative;display:inline-block;background:var(--wit);color:var(--zwart);font-family:"Fraunces",serif;font-weight:900;font-size:1.3rem;padding:8px 22px;border:3px solid var(--zwart);border-radius:10px;box-shadow:5px 5px 0 var(--zwart);transform:rotate(-1.5deg)}
+    .hero{max-width:640px;margin:0 auto;padding:64px 32px 36px;text-align:center}
+    .eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    .hero h1{font-weight:700;font-size:clamp(2.2rem,6vw,2.9rem);letter-spacing:-.03em;line-height:1.08;margin-bottom:14px;color:var(--ink)}
+    .hero h1 em{font-style:normal;color:var(--accent)}
+    .hero-sub{font-size:1rem;color:var(--ink-muted);max-width:420px;margin:0 auto 20px;line-height:1.6;font-weight:400}
+    .price-tag{display:inline-block;color:var(--ink-muted);font-weight:500;font-size:.96rem}
+    .price-tag strong{color:var(--ink);font-weight:700}
 
     /* GRID */
-    .shirts-section{max-width:900px;margin:0 auto;padding:0 24px 40px}
-    .shirts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .shirt-card{background:var(--kaart);border:3px solid var(--zwart);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;box-shadow:6px 6px 0 var(--zwart)}
-    .shirt-card:hover{transform:translateY(-4px)}
-    .shirt-card.active{border-color:var(--oranje-dk);box-shadow:6px 6px 0 var(--oranje-dk)}
-    .shirt-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3;border-bottom:3px solid var(--zwart)}
+    .shirts-section{max-width:900px;margin:0 auto;padding:0 24px 48px}
+    .shirts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .shirt-card{background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
+    .shirt-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .shirt-card.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+    .shirt-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--bg-tint)}
     .shirt-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block}
-    .shirt-card:hover .shirt-img-wrap img,.shirt-card.active .shirt-img-wrap img{transform:scale(1.05)}
-    .badge-pos{position:absolute;top:12px;left:12px;background:var(--zwart);color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;z-index:2;border-radius:6px}
-    .q-select{position:absolute;bottom:12px;right:12px;background:var(--wit);color:var(--zwart);border:2px solid var(--zwart);font-family:"Fraunces",serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s;z-index:2}
-    .shirt-card.active .q-select{background:var(--oranje-dk);border-color:var(--oranje-dk);color:var(--wit)}
-    .q-select:hover{background:var(--zwart);color:var(--wit)}
-    .shirt-info{padding:16px 16px 18px}
-    .shirt-label{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--oranje-dk);margin-bottom:3px}
-    .shirt-title{font-family:"Fraunces",serif;font-weight:800;font-size:1.35rem;color:var(--zwart);margin-bottom:8px}
-    .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-    .chip{font-size:.72rem;padding:3px 10px;border-radius:20px;border:1.5px solid var(--zwart);color:var(--zwart);font-weight:700}
+    .shirt-card:hover .shirt-img-wrap img,.shirt-card.active .shirt-img-wrap img{transform:scale(1.03)}
+    .badge-pos{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:600;font-size:.74rem;letter-spacing:.02em;padding:5px 12px;z-index:2;border-radius:var(--r-pill)}
+    .q-select{position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,.92);color:var(--ink);border:none;font-weight:600;font-size:.74rem;padding:6px 13px;border-radius:var(--r-pill);cursor:pointer;transition:background .2s,color .2s;z-index:2}
+    .shirt-card.active .q-select{background:var(--accent);color:#fff}
+    .shirt-info{padding:16px 18px 20px}
+    .shirt-label{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+    .shirt-title{font-weight:700;font-size:1.18rem;color:var(--ink);margin-bottom:10px}
+    .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+    .chip{font-size:.74rem;padding:4px 11px;border-radius:var(--r-pill);border:1px solid var(--hairline-2);color:var(--ink-muted);font-weight:500}
     .shirt-bottom{display:flex;align-items:center;justify-content:space-between}
-    .shirt-price{font-family:"Fraunces",serif;font-weight:900;font-size:1.35rem;color:var(--zwart)}
-    .shirt-price small{font-size:.72rem;font-weight:600;color:var(--zwart);opacity:.6;margin-left:3px}
-    .check-circle{width:28px;height:28px;border-radius:50%;border:2px solid var(--zwart);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
-    .shirt-card.active .check-circle{background:var(--oranje-dk);border-color:var(--oranje-dk)}
+    .shirt-price{font-weight:700;font-size:1.1rem;color:var(--ink)}
+    .shirt-price small{font-size:.74rem;font-weight:400;color:var(--ink-faint);margin-left:3px}
+    .check-circle{width:24px;height:24px;border-radius:50%;border:1px solid var(--hairline-2);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+    .shirt-card.active .check-circle{background:var(--accent);border-color:var(--accent)}
     .check-circle svg{opacity:0;transition:opacity .2s}
     .shirt-card.active .check-circle svg{opacity:1}
 
     /* FORM */
-    .form-section{max-width:540px;margin:0 auto;padding:0 24px 60px}
-    .form-heading{font-weight:900;font-size:1.5rem;letter-spacing:-.3px;color:var(--zwart);margin-bottom:18px}
-    .form-heading em{color:var(--oranje-dk);font-style:italic}
-    .bestel-card{background:var(--kaart);border-radius:16px;border:3px solid var(--zwart);padding:26px;box-shadow:6px 6px 0 var(--zwart)}
-    .preview-strip{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:var(--bruin-lt);border:2px solid var(--zwart);margin-bottom:18px}
-    .preview-strip img{width:50px;height:50px;object-fit:cover;border-radius:8px;border:2px solid var(--zwart)}
-    .preview-name{font-family:"Fraunces",serif;font-weight:700;font-size:.95rem;color:var(--zwart)}
-    .preview-price{font-size:.78rem;color:var(--oranje-dk);font-weight:700;margin-top:2px}
-    .form-row{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}
-    .form-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--zwart);opacity:.7}
-    .form-input,.form-select{width:100%;padding:11px 14px;border-radius:10px;border:2px solid var(--zwart);background:var(--wit);color:var(--zwart);font-size:.9rem;font-family:"Nunito Sans",sans-serif;transition:border-color .2s,box-shadow .2s}
-    .form-select option{background:var(--wit)}
-    .form-input:focus,.form-select:focus{outline:none;border-color:var(--oranje-dk);box-shadow:0 0 0 3px rgba(232,84,28,.18)}
-    .form-input:hover,.form-select:hover{border-color:var(--oranje-dk)}
-    .form-input::placeholder{color:#8a8272}
-    .divider{height:2px;background:var(--zwart);opacity:.1;margin:14px 0}
-    button[type="submit"]{margin-top:16px;width:100%;background:var(--zwart);color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;border:3px solid var(--zwart);padding:14px 22px;cursor:pointer;border-radius:12px;box-shadow:5px 5px 0 var(--oranje-dk);transition:transform .15s,box-shadow .15s}
-    button[type="submit"]:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--oranje-dk)}
-    button[type="submit"]:disabled{background:#ccc;color:#888;border-color:#ccc;box-shadow:none;cursor:not-allowed}
-    .wa-btn{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:12px;padding:12px;border-radius:10px;border:2px solid #25D366;background:rgba(37,211,102,.08);color:#1b8a48;text-decoration:none;font-weight:700;font-size:.85rem;transition:background .2s}
-    .wa-btn:hover{background:rgba(37,211,102,.16)}
-    .form-status{margin-top:12px;font-size:.85rem;text-align:center;padding:10px;border-radius:10px;display:none;font-weight:700;border:2px solid var(--zwart)}
-    .form-status.laden{display:block;background:var(--bruin-lt);color:var(--zwart)}
-    .form-status.succes{display:block;background:#dff5e6;color:#1b7a3d;border-color:#1b7a3d}
-    .form-status.fout{display:block;background:#fbe2de;color:#b3341a;border-color:#b3341a}
+    .form-section{max-width:540px;margin:0 auto;padding:0 24px 72px}
+    .form-heading{font-weight:700;font-size:1.35rem;letter-spacing:-.02em;color:var(--ink);margin-bottom:18px}
+    .form-heading em{color:var(--accent);font-style:normal}
+    .bestel-card{background:var(--bg);border-radius:var(--r-lg);border:1px solid var(--hairline);padding:28px}
+    .preview-strip{display:flex;align-items:center;gap:12px;padding:12px;border-radius:var(--r-md);background:var(--bg-tint);margin-bottom:20px}
+    .preview-strip img{width:48px;height:48px;object-fit:cover;border-radius:var(--r-sm)}
+    .preview-name{font-weight:600;font-size:.95rem;color:var(--ink)}
+    .preview-price{font-size:.8rem;color:var(--ink-muted);margin-top:2px}
+    .form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+    .form-label{font-size:.76rem;font-weight:600;letter-spacing:.04em;color:var(--ink-muted)}
+    .form-input,.form-select{width:100%;padding:11px 14px;border-radius:var(--r-sm);border:1px solid var(--hairline-2);background:var(--bg);color:var(--ink);font-size:.92rem;font-family:inherit;transition:border-color .2s,box-shadow .2s}
+    .form-input:focus,.form-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+    .form-input::placeholder{color:var(--ink-faint)}
+    .divider{height:1px;background:var(--hairline);margin:16px 0}
+    button[type="submit"]{margin-top:18px;width:100%;background:var(--accent);color:#fff;font-weight:600;font-size:1rem;border:none;padding:14px 22px;cursor:pointer;border-radius:var(--r-pill);transition:background .15s,transform .12s}
+    button[type="submit"]:hover{background:var(--accent-dk)}
+    button[type="submit"]:active{transform:scale(.98)}
+    button[type="submit"]:disabled{background:var(--hairline-2);color:#fff;cursor:not-allowed}
+    .wa-btn{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:12px;padding:12px;border-radius:var(--r-pill);border:1px solid var(--hairline-2);background:transparent;color:#1b8a48;text-decoration:none;font-weight:600;font-size:.86rem;transition:background .2s}
+    .wa-btn:hover{background:rgba(37,211,102,.08)}
+    .form-status{margin-top:14px;font-size:.86rem;text-align:center;padding:12px;border-radius:var(--r-sm);display:none;font-weight:500}
+    .form-status.laden{display:block;background:var(--bg-tint);color:var(--ink-muted)}
+    .form-status.succes{display:block;background:#e9f8ee;color:#1b7a3d}
+    .form-status.fout{display:block;background:#fdeeea;color:#b3341a}
     @media(max-width:600px){
       .shirts-grid{grid-template-columns:1fr}
-      .hero{padding:44px 18px 30px}
+      .hero{padding:48px 20px 24px}
       .shirts-section,.form-section{padding-left:16px;padding-right:16px}
     }
   </style>
 </head>
 <body>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
-      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
-    </div>
-  </div>
   <nav>
     <a class="logo" href="index.html">Kiek<span>cam</span></a>
     <button class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu openen">
@@ -155,22 +128,22 @@
     <div class="nav-right">
       <a href="https://wa.me/31630576584" class="nav-wa-btn" aria-label="Contact via WhatsApp">WhatsApp</a>
       <a href="https://wa.me/31630576584" class="whatsapp-nav-icon" aria-label="WhatsApp contact openen">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="white" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
       </a>
     </div>
   </nav>
   <section class="hero">
-    <div class="hero-badge">Beperkte voorraad · 2026</div>
+    <span class="eyebrow">Beperkte voorraad · 2026</span>
     <h1>Bestel je <em>Kiekcam</em></h1>
     <p class="hero-sub">Kies jouw kleur hieronder en vul je gegevens in. Wij regelen de rest.</p>
-    <div class="price-tag">€44,99 per camera · gratis verzending</div>
+    <div class="price-tag"><strong>€44,99</strong> per camera · gratis verzending</div>
   </section>
   <div class="shirts-section">
     <div class="shirts-grid" id="shirtsGrid">
       <article class="shirt-card active" data-shirt="Kiekcam Wit" tabindex="0" aria-label="Selecteer Kiekcam in wit">
-        <div class="shirt-img-wrap" style="background:#F5F1E4">
+        <div class="shirt-img-wrap">
           <div class="badge-pos">Wit</div>
           <img src="kiekcam-wit.jpg" alt="Kiekcam retro digitale camera in wit">
           <button class="q-select" type="button">Geselecteerd</button>
@@ -186,7 +159,7 @@
           <div class="shirt-bottom">
             <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -194,7 +167,7 @@
         </div>
       </article>
       <article class="shirt-card" data-shirt="Kiekcam Zwart" tabindex="0" aria-label="Selecteer Kiekcam in zwart">
-        <div class="shirt-img-wrap" style="background:#18140F">
+        <div class="shirt-img-wrap">
           <div class="badge-pos">Zwart</div>
           <img src="kiekcam-zwart.jpg" alt="Kiekcam retro digitale camera in zwart">
           <button class="q-select" type="button">Selecteer</button>
@@ -210,7 +183,7 @@
           <div class="shirt-bottom">
             <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -218,7 +191,7 @@
         </div>
       </article>
       <article class="shirt-card" data-shirt="Kiekcam Oranje" tabindex="0" aria-label="Selecteer Kiekcam in oranje">
-        <div class="shirt-img-wrap" style="background:#E8541C">
+        <div class="shirt-img-wrap">
           <div class="badge-pos">Oranje</div>
           <img src="kiekcam-oranje.jpg" alt="Kiekcam retro digitale camera in oranje">
           <button class="q-select" type="button">Selecteer</button>
@@ -234,7 +207,7 @@
           <div class="shirt-bottom">
             <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -242,7 +215,7 @@
         </div>
       </article>
       <article class="shirt-card" data-shirt="Kiekcam Bruin" tabindex="0" aria-label="Selecteer Kiekcam in bruin">
-        <div class="shirt-img-wrap" style="background:#6B4423">
+        <div class="shirt-img-wrap">
           <div class="badge-pos">Bruin</div>
           <img src="kiekcam-bruin.jpg" alt="Kiekcam retro digitale camera in bruin">
           <button class="q-select" type="button">Selecteer</button>
@@ -258,7 +231,7 @@
           <div class="shirt-bottom">
             <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -311,7 +284,7 @@
         </div>
         <button type="submit" id="submit-btn">Bestelling versturen</button>
         <a id="wa-link" class="wa-btn" href="#" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="#25D366">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           Of bestel via WhatsApp
