@@ -321,4 +321,83 @@
     </div>
   </div>
   <script>
-    const
+    const shirtSelect = document.getElementById('shirt');
+    const previewImg = document.getElementById('previewImg');
+    const previewName = document.getElementById('previewName');
+    const formBlock = document.getElementById('bestel-form-blok');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+    const waLink = document.getElementById('wa-link');
+    function setActive(card) {
+      document.querySelectorAll('.shirt-card').forEach(c => {
+        c.classList.remove('active');
+        c.querySelector('.q-select').textContent = 'Selecteer';
+      });
+      card.classList.add('active');
+      card.querySelector('.q-select').textContent = 'Geselecteerd';
+      const name = card.getAttribute('data-shirt');
+      shirtSelect.value = name;
+      previewName.textContent = name;
+      previewImg.src = card.querySelector('img').src;
+    }
+    document.querySelectorAll('.shirt-card').forEach(card => {
+      card.addEventListener('click', () => {
+        setActive(card);
+        if (window.innerWidth < 700) {
+          formBlock.scrollIntoView({ behavior:'smooth', block:'start' });
+        }
+      });
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setActive(card);
+        }
+      });
+    });
+    function buildWA() {
+      const vals = ['naam','email','telefoon','adres','postcode'].map(id =>
+        document.getElementById(id).value.trim()
+      );
+      const kleur = shirtSelect.value;
+      const labels = ['Naam','Email','06-nummer','Adres','Postcode'];
+      let text = 'Bestelling Kiekcam%0A%0A';
+      vals.forEach((v,i) => {
+        text += labels[i] + ': ' + encodeURIComponent(v) + '%0A';
+      });
+      text += 'Kleur: ' + encodeURIComponent(kleur) + '%0A';
+      text += 'Prijs: €44,99 per camera';
+      return 'https://wa.me/31630576584?text=' + text;
+    }
+    waLink.addEventListener('click', e => {
+      e.preventDefault();
+      window.open(buildWA(), '_blank');
+    });
+    document.getElementById('bestel-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      formStatus.className = 'form-status laden';
+      formStatus.textContent = 'Wordt verstuurd...';
+      try {
+        const res = await fetch(e.target.action, {
+          method: 'POST',
+          body: new FormData(e.target),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          window.open(buildWA(), '_blank');
+          formStatus.className = 'form-status succes';
+          formStatus.textContent = 'Bestelling verstuurd! Je ontvangt een bevestiging per e-mail.';
+          e.target.reset();
+        } else {
+          throw new Error();
+        }
+      } catch {
+        formStatus.className = 'form-status fout';
+        formStatus.textContent = 'Er ging iets mis. Probeer opnieuw of gebruik WhatsApp.';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
