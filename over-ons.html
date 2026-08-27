@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Over ons – VoetbalshirtsNL | Fan-shirts Nederlands elftal</title>
-  <meta name="description" content="VoetbalshirtsNL is een kleine, gepassioneerde shop voor fan-versie shirts van het Nederlands elftal. Scherpe prijzen, snelle levering en persoonlijk contact via WhatsApp."/>
-
-  <link rel="canonical" href="https://www.voetbalshirtsnl.nl/over-ons.html"/>
-
+  <title>Over ons – Kiekcam | Retro Digitale Camera</title>
+  <meta name="description" content="Kiekcam is een kleine, gepassioneerde shop voor retro digitale camera's. Scherpe prijs, snelle levering en persoonlijk contact via WhatsApp."/>
+  <link rel="canonical" href="https://www.kiekcam.nl/over-ons.html"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Over ons – VoetbalshirtsNL"/>
-  <meta property="og:description" content="Een kleine shop met een groot hart voor Oranje. Fan-versie shirts van het Nederlands elftal voor een scherpe prijs."/>
-  <meta property="og:url" content="https://www.voetbalshirtsnl.nl/over-ons.html"/>
-  <meta property="og:image" content="https://www.voetbalshirtsnl.nl/oranje-shirt.jpg"/>
+  <meta property="og:title" content="Over ons – Kiekcam"/>
+  <meta property="og:description" content="Een kleine shop met een groot hart voor retrofotografie. Kiekcam voor een scherpe prijs."/>
+  <meta property="og:url" content="https://www.kiekcam.nl/over-ons.html"/>
+  <meta property="og:image" content="https://www.kiekcam.nl/kiekcam-oranje.jpg"/>
   <meta property="og:locale" content="nl_NL"/>
-  <meta property="og:site_name" content="VoetbalshirtsNL"/>
-
+  <meta property="og:site_name" content="Kiekcam"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Over ons – VoetbalshirtsNL"/>
-  <meta name="twitter:description" content="Een kleine shop met een groot hart voor Oranje. Fan-versie shirts van het Nederlands elftal voor een scherpe prijs."/>
-
+  <meta name="twitter:title" content="Over ons – Kiekcam"/>
+  <meta name="twitter:description" content="Een kleine shop met een groot hart voor retrofotografie. Kiekcam voor een scherpe prijs."/>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,15 +23,15 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.voetbalshirtsnl.nl/" },
-          { "@type": "ListItem", "position": 2, "name": "Over ons", "item": "https://www.voetbalshirtsnl.nl/over-ons.html" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.kiekcam.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Over ons", "item": "https://www.kiekcam.nl/over-ons.html" }
         ]
       },
       {
         "@type": "Store",
-        "name": "VoetbalshirtsNL",
-        "url": "https://www.voetbalshirtsnl.nl",
-        "description": "Online shop voor fan-versie shirts van het Nederlands elftal. Scherpe prijzen en persoonlijke service.",
+        "name": "Kiekcam",
+        "url": "https://www.kiekcam.nl",
+        "description": "Online shop voor retro digitale camera's. Scherpe prijs en persoonlijke service.",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer service",
@@ -48,74 +43,49 @@
     ]
   }
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --oranje: #FF5500;
-      --oranje-dk: #cc4400;
-      --bg: #252540;
-      --card: #2e2e50;
-      --rand: #3e3e62;
-      --tekst: #f0f0f0;
-      --zacht: #b0b0cc;
+      --wit:#FDFBF6;--zwart:#18140F;--oranje:#E8541C;--oranje-dk:#c1420f;
+      --bruin:#6B4423;--bruin-lt:#EFDCB8;
+      --room:#F7EEDD;--kaart:#FFFFFF;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body{font-family:"Nunito Sans",sans-serif;background:var(--room);color:var(--zwart);line-height:1.6;overflow-x:hidden}
+    h1,h2{font-family:"Fraunces",serif}
+    a{color:inherit}
+    @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none!important} }
 
-    body {
-      font-family: 'Barlow', sans-serif;
-      background: var(--bg);
-      color: var(--tekst);
-      line-height: 1.6;
-    }
+    /* MARQUEE TOPBALK */
+    .marquee{background:var(--zwart);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--zwart)}
+    .marquee-track{display:inline-block;padding:10px 0;animation:schuif 22s linear infinite}
+    .marquee-track span{display:inline-block;color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:0 22px}
+    .marquee-track span:nth-child(odd){color:var(--oranje)}
+    @keyframes schuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    nav {
-      position: fixed;
+    /* NAV */
+    nav{
+      position: sticky;
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
       justify-content:space-between;
       padding: 0 40px;
-      height: 68px;
-      background: rgba(35,35,58,0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #3a3a5e;
+      height: 76px;
+      background: var(--room);
+      border-bottom: 3px solid var(--zwart);
     }
-
-    .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.45rem;
-      letter-spacing: -0.5px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .logo span { color: var(--oranje); }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .logo{font-family:"Fraunces",serif;font-weight:900;font-size:1.8rem;letter-spacing:-.5px;text-decoration:none;color:var(--zwart)}
+    .logo span{color:var(--oranje)}
+    .nav-links{list-style:none;display:flex;gap:8px}
+    .nav-links a{display:inline-block;font-size:.9rem;font-weight:800;text-decoration:none;color:var(--zwart);text-transform:uppercase;letter-spacing:.03em;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s,transform .15s}
     .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--oranje); }
-
-    .nav-toggle {
+    .nav-links a[aria-current="page"]{background:var(--zwart);color:var(--wit);transform:rotate(-2deg)}
+    .nav-toggle{
       display: none;
       flex-direction: column;
       gap: 5px;
@@ -124,247 +94,226 @@
       cursor: pointer;
       padding: 4px;
     }
-    .nav-toggle span {
-      display: block;
-      width: 24px; height: 2px;
-      background: #fff;
-    }
-
-    .nav-right {
+    .nav-toggle span{display:block;width:26px;height:3px;background:var(--zwart)}
+    .nav-right{
       display: flex;
       align-items: center;
       gap: 12px;
     }
-
-    .btn-primary {
-      background: var(--oranje);
-      color: #fff;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.92rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: none;
-      padding: 13px 32px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s;
-      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 12px 100%);
+    .btn-primary{
+      display:inline-block;background:var(--zwart);color:var(--wit);font-weight:800;font-size:.9rem;
+      text-transform:uppercase;letter-spacing:.03em;border:3px solid var(--zwart);padding:10px 22px;
+      cursor:pointer;text-decoration:none;border-radius:10px;box-shadow:4px 4px 0 var(--oranje-dk);
+      transition:transform .15s,box-shadow .15s;
     }
-    .btn-primary:hover { background: var(--oranje-dk); }
-
-    .whatsapp-nav-icon {
-      width: 36px;
-      height: 36px;
+    .btn-primary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--oranje-dk)}
+    .whatsapp-nav-icon{
+      width: 40px; height: 40px;
       border-radius: 50%;
       background: #25D366;
       color: #fff;
+      border: 3px solid var(--zwart);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
       transition: transform 0.15s;
     }
-    .whatsapp-nav-icon:hover { transform: scale(1.1); }
+    .whatsapp-nav-icon:hover{ transform: rotate(-8deg) scale(1.05); }
 
-    main {
-      padding: 100px 48px 60px;
-      max-width: 900px;
+    main{
+      padding: 60px 40px 60px;
+      max-width: 960px;
       margin: 0 auto;
     }
-
-    .breadcrumb {
-      font-size: 0.8rem;
-      color: var(--zacht);
-      margin-bottom: 18px;
-    }
-    .breadcrumb a { color: var(--zacht); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--oranje); }
-    .breadcrumb span { margin: 0 6px; }
-
-    .badge {
+    .breadcrumb{font-size:.82rem;color:var(--zwart);opacity:.7;margin-bottom:18px;font-weight:700}
+    .breadcrumb a{color:var(--zwart);text-decoration:none}
+    .breadcrumb a:hover{color:var(--oranje-dk)}
+    .breadcrumb span{margin:0 6px}
+    .badge{
+      position: relative;
       display: inline-block;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.75rem;
+      font-family: "Fraunces", serif;
+      font-size: .8rem;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: .05em;
       text-transform: uppercase;
-      color: var(--oranje);
-      border: 1.5px solid var(--oranje);
-      padding: 5px 14px;
-      margin-bottom: 24px;
-      border-radius: 2px;
+      color: var(--wit);
+      background: var(--zwart);
+      padding: 7px 16px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      transform: rotate(-3deg);
     }
-
-    h1 {
-      font-family: 'Barlow Condensed', sans-serif;
+    h1{
       font-weight: 900;
-      font-size: clamp(2.8rem, 6vw, 3.6rem);
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
       line-height: 1;
-      color: #fff;
+      color: var(--zwart);
     }
-
-    .subtitle {
+    .subtitle{
       font-size: 1.05rem;
-      color: var(--zacht);
-      margin-bottom: 32px;
-      max-width: 600px;
-      line-height: 1.6;
+      color: var(--zwart);
+      opacity:.8;
+      margin-bottom: 34px;
+      max-width: 620px;
+      line-height: 1.65;
+      font-weight: 600;
     }
-
-    .grid {
+    .grid{
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
+      gap: 26px;
       align-items: flex-start;
     }
-
-    .card {
-      background: var(--card);
+    .card{
+      background: var(--kaart);
       border-radius: 14px;
       padding: 28px;
-      border: 1px solid var(--rand);
+      border: 3px solid var(--zwart);
+      box-shadow: 6px 6px 0 var(--zwart);
     }
-
-    .card h2 {
-      font-family: 'Barlow Condensed', sans-serif;
+    .card:nth-of-type(1){ transform: rotate(-1deg); }
+    .card:nth-of-type(2){ transform: rotate(1deg); }
+    .card h2{
       font-weight: 800;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 1.4rem;
+      letter-spacing: -.3px;
       margin-bottom: 12px;
-      color: #fff;
+      color: var(--zwart);
     }
-
-    .card p {
-      font-size: 0.97rem;
-      color: var(--zacht);
+    .card p{
+      font-size: .97rem;
+      color: var(--zwart);
+      opacity: .85;
       line-height: 1.75;
       margin-bottom: 12px;
+      font-weight: 600;
     }
-    .card p:last-of-type { margin-bottom: 0; }
-
-    .list {
-      list-style: none;
-      margin-top: 6px;
-    }
-    .list li {
-      font-size: 0.95rem;
-      color: var(--zacht);
+    .card p:last-of-type{ margin-bottom: 0; }
+    .list{ list-style: none; margin-top: 6px; }
+    .list li{
+      font-size: .95rem;
+      color: var(--zwart);
+      opacity: .85;
       margin-bottom: 10px;
-      padding-left: 18px;
+      padding-left: 20px;
       position: relative;
       line-height: 1.5;
+      font-weight: 600;
     }
-    .list li::before {
+    .list li::before{
       content: "";
       position: absolute;
       left: 0; top: 8px;
-      width: 6px; height: 6px;
+      width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--oranje);
+      border: 1.5px solid var(--zwart);
     }
-
-    .highlight {
+    .highlight{
       margin-top: 18px;
       padding: 14px 16px;
-      border-radius: 8px;
-      background: rgba(255,85,0,0.08);
-      border: 1px solid rgba(255,85,0,0.25);
-      font-size: 0.9rem;
-      color: var(--zacht);
+      border-radius: 10px;
+      background: var(--bruin-lt);
+      border: 2px solid var(--zwart);
+      font-size: .9rem;
+      color: var(--zwart);
       line-height: 1.6;
+      font-weight: 600;
     }
-
-    .usp-bar {
+    .usp-bar{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 28px;
+      gap: 18px;
+      margin-top: 30px;
     }
-    .usp-item {
-      background: var(--card);
-      border: 1px solid var(--rand);
-      border-radius: 10px;
+    .usp-item{
+      background: var(--kaart);
+      border: 3px solid var(--zwart);
+      border-radius: 12px;
       padding: 18px 16px;
       text-align: center;
+      box-shadow: 4px 4px 0 var(--zwart);
     }
-    .usp-item .usp-icon { font-size: 1.8rem; margin-bottom: 6px; }
-    .usp-item strong {
+    .usp-item:nth-child(2n){ transform: rotate(-1.5deg); }
+    .usp-item strong{
       display: block;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: "Fraunces", serif;
       font-size: 1rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: .04em;
       margin-bottom: 4px;
-      color: #fff;
+      color: var(--zwart);
     }
-    .usp-item p {
-      font-size: 0.82rem;
-      color: var(--zacht);
+    .usp-item p{
+      font-size: .82rem;
+      color: var(--zwart);
+      opacity: .75;
       line-height: 1.4;
+      font-weight: 600;
     }
-
-    .back-link {
+    .back-link{
       display: inline-flex;
       align-items: center;
       gap: 6px;
       margin-top: 32px;
-      font-size: 0.9rem;
+      font-size: .92rem;
       text-decoration: none;
-      color: var(--oranje);
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      color: var(--oranje-dk);
+      font-weight: 800;
+      letter-spacing: .04em;
       text-transform: uppercase;
-      transition: gap 0.15s;
+      transition: gap .15s;
     }
-    .back-link:hover { gap: 10px; }
-
+    .back-link:hover{ gap: 10px; }
     @media (max-width: 900px) {
-      nav { padding: 0 20px; }
-      .nav-links {
+      nav{ padding: 0 20px; }
+      .nav-links{
         display: none;
         position: fixed;
-        top: 68px; left: 0; right: 0;
-        background: #1a1a2e;
+        top: 76px; left: 0; right: 0;
+        background: var(--room);
         flex-direction: column;
         gap: 0;
-        border-bottom: 1px solid #2a2a45;
+        border-bottom: 3px solid var(--zwart);
+        z-index: 99;
       }
-      .nav-links.open { display: flex; }
-      .nav-links a {
+      .nav-links.open{ display: flex; }
+      .nav-links a{
         padding: 14px 24px;
-        border-bottom: 1px solid #2a2a45;
+        border-bottom: 1px solid var(--zwart);
         display: block;
+        border-radius: 0;
       }
-      .nav-toggle { display: flex; }
-      .btn-primary { display: none; }
-      main { padding: 90px 20px 40px; }
-      .grid { grid-template-columns: 1fr; }
-      .usp-bar { grid-template-columns: 1fr; }
+      .nav-toggle{ display: flex; }
+      .btn-primary{ display: none; }
+      main{ padding: 50px 20px 40px; }
+      .grid{ grid-template-columns: 1fr; }
+      .usp-bar{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
+      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
+    </div>
+  </div>
   <nav aria-label="Hoofdnavigatie">
-    <a class="logo" href="index.html" aria-label="VoetbalshirtsNL – naar homepage">VOETBALSHIRTS<span>NL</span></a>
-
+    <a class="logo" href="index.html" aria-label="Kiekcam – naar homepage">Kiek<span>cam</span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu openen">
       <span></span><span></span><span></span>
     </button>
-
     <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="index.html#shirts">Shirts</a></li>
+      <li><a href="index.html#kleuren">Kleuren</a></li>
+      <li><a href="index.html#hoe-het-werkt">Hoe het werkt</a></li>
       <li><a href="bestellen.html">Bestellen</a></li>
       <li><a href="over-ons.html" aria-current="page">Over ons</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
-
     <div class="nav-right">
       <a href="https://wa.me/31630576584" class="btn-primary" aria-label="Contact via WhatsApp">WhatsApp</a>
       <a href="https://wa.me/31630576584" class="whatsapp-nav-icon" aria-label="WhatsApp contact openen">
@@ -374,56 +323,50 @@
       </a>
     </div>
   </nav>
-
   <main>
     <nav aria-label="Breadcrumb" class="breadcrumb">
       <a href="index.html">Home</a>
       <span aria-hidden="true">›</span>
       <span aria-current="page">Over ons</span>
     </nav>
-
     <div class="badge">Over ons</div>
-    <h1>VoetbalshirtsNL in het kort</h1>
+    <h1>Kiekcam in het kort</h1>
     <p class="subtitle">
-      VoetbalshirtsNL is ontstaan uit iets simpels: samen Oranje kijken, in een goed zittend shirt dat niet direct je hele maandbudget kost.
+      Kiekcam is ontstaan uit iets simpels: spontane momenten vastleggen, in retrostijl, zonder dat je hele maandbudget eraan opgaat.
     </p>
-
     <div class="grid">
       <div class="card">
         <h2>Wie wij zijn</h2>
         <p>
-          Wij zijn een kleine, nuchtere shop met een groot hart voor het Nederlands elftal. Geen grote keten, maar een liefhebber die het
-          leuk vindt om anderen ook in het Oranje te zien.
+          Wij zijn een kleine, nuchtere shop met een groot hart voor retrofotografie. Geen grote keten, maar liefhebbers die het
+          leuk vinden om anderen ook met een Kiekcam op pad te zien.
         </p>
         <p>
-          Daarom houden we het graag duidelijk: strakke matchday shirts, een scherpe prijs en snelle communicatie. Bestellen moet net zo
-          makkelijk voelen als je vrienden een bericht sturen.
+          Daarom houden we het graag duidelijk: een compacte retro camera, een scherpe prijs en snelle communicatie. Bestellen
+          moet net zo makkelijk voelen als je vrienden een bericht sturen.
         </p>
         <p>
-          Heb je een vraag over maat, levering of iets anders? Je krijgt gewoon een echt antwoord – geen robot, geen wachtrij.
+          Heb je een vraag over een kleur, levering of iets anders? Je krijgt gewoon een echt antwoord – geen robot, geen wachtrij.
         </p>
       </div>
-
       <div class="card">
         <h2>Hoe we werken</h2>
         <ul class="list" aria-label="Stappen bij het bestellen">
-          <li>Je bestelt je shirt via de website of WhatsApp.</li>
+          <li>Je bestelt je Kiekcam via de website of WhatsApp.</li>
           <li>Wij checken je bestelling en sturen je betaalverzoek via Tikkie.</li>
           <li>Na betaling gaat je pakketje zo snel mogelijk op de post.</li>
-          <li>Je ontvangt je track &amp; trace zodat je precies weet wanneer je kunt juichen.</li>
+          <li>Je ontvangt je track &amp; trace zodat je precies weet wanneer je kunt kieken.</li>
         </ul>
-
         <div class="highlight" role="note">
-          We vinden het belangrijk dat je tevreden bent met je bestelling. Klopt er iets niet met je maat of heb je een vraag?
+          We vinden het belangrijk dat je tevreden bent met je bestelling. Klopt er iets niet met je kleur of heb je een vraag?
           Stuur ons even een bericht, dan kijken we samen naar een oplossing.
         </div>
       </div>
     </div>
-
     <section aria-label="Onze voordelen" class="usp-bar">
       <div class="usp-item">
         <strong>Scherpe prijs</strong>
-        <p>Fan-versie shirts vanaf €29,99 excl. verzendkosten</p>
+        <p>Kiekcam voor €44,99, in vier kleuren</p>
       </div>
       <div class="usp-item">
         <strong>Persoonlijk contact</strong>
@@ -434,12 +377,10 @@
         <p>Track &amp; trace na betaling</p>
       </div>
     </section>
-
     <a href="bestellen.html" class="back-link" aria-label="Ga naar de bestelpagina">
-      ← Bestel nu je shirt
+      ← Bestel je Kiekcam
     </a>
   </main>
-
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -454,6 +395,5 @@
       });
     });
   </script>
-
 </body>
 </html>
