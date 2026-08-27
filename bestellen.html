@@ -3,199 +3,188 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bestel – Fan-versie shirt 2026 | VoetbalshirtsNL</title>
-  <meta name="description" content="Bestel het Oranje fan-versie thuis- of uitshirt 2026 voor slechts 29,99 per stuk, exclusief verzendkosten. Maat S t/m XL. Snel en eenvoudig bestellen."/>
+  <title>Bestel je Kiekcam 2026 | Retro Digitale Camera</title>
+  <meta name="description" content="Bestel de Kiekcam retro digitale camera in wit, zwart, oranje of bruin voor €44,99. Snel en eenvoudig bestellen."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --oranje:#FF5500;--oranje-dk:#cc4400;--zwart:#0a0a0a;
-      --bg:#252540;--card:#2e2e50;--rand:#3e3e62;--tekst:#f0f0f0;--zacht:#b0b0cc;
+      --wit:#FDFBF6;--zwart:#18140F;--oranje:#E8541C;--oranje-dk:#c1420f;
+      --bruin:#6B4423;--bruin-lt:#EFDCB8;
+      --room:#F7EEDD;--kaart:#FFFFFF;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Barlow,sans-serif;background:var(--bg);color:var(--tekst);min-height:100vh}
+    body{font-family:"Nunito Sans",sans-serif;background:var(--room);color:var(--zwart);min-height:100vh;overflow-x:hidden}
+    h1,.form-heading{font-family:"Fraunces",serif}
+    a{color:inherit}
+    @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none!important} }
+
+    /* MARQUEE TOPBALK */
+    .marquee{background:var(--zwart);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--zwart)}
+    .marquee-track{display:inline-block;padding:10px 0;animation:schuif 22s linear infinite}
+    .marquee-track span{display:inline-block;color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:0 22px}
+    .marquee-track span:nth-child(odd){color:var(--oranje)}
+    @keyframes schuif{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* NAV */
+    nav{
+      position:sticky; top:0; left:0; right:0; height:76px;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 40px;
+      background:var(--room);
+      border-bottom:3px solid var(--zwart);
+      z-index:100;
+    }
+    .logo{font-family:"Fraunces",serif;font-weight:900;font-size:1.8rem;letter-spacing:-.5px;text-decoration:none;color:var(--zwart)}
+    .logo span{color:var(--oranje)}
+    .nav-links{list-style:none;display:flex;gap:8px}
+    .nav-links a{display:inline-block;font-size:.9rem;font-weight:800;text-decoration:none;color:var(--zwart);text-transform:uppercase;letter-spacing:.03em;padding:8px 14px;border-radius:8px;transition:background .15s,color .15s,transform .15s}
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"]{background:var(--zwart);color:var(--wit);transform:rotate(-2deg)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+    .nav-toggle span{display:block;width:26px;height:3px;background:var(--zwart)}
+    .nav-right{display:flex;align-items:center;gap:12px}
+    .nav-wa-btn{
+      display:inline-block;background:var(--zwart);color:var(--wit);font-weight:800;font-size:.9rem;
+      text-transform:uppercase;letter-spacing:.03em;border:3px solid var(--zwart);padding:10px 22px;
+      cursor:pointer;text-decoration:none;border-radius:10px;box-shadow:4px 4px 0 var(--oranje-dk);
+      transition:transform .15s,box-shadow .15s;
+    }
+    .nav-wa-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--oranje-dk)}
+    .whatsapp-nav-icon{
+      width:40px;height:40px;border-radius:50%;background:#25D366;color:#fff;border:3px solid var(--zwart);
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s;
+    }
+    .whatsapp-nav-icon:hover{transform:rotate(-8deg) scale(1.05)}
+    @media(max-width:900px){
+      nav{padding:0 20px}
+      .nav-links{display:none;position:fixed;top:76px;left:0;right:0;background:var(--room);flex-direction:column;gap:0;border-bottom:3px solid var(--zwart);z-index:99}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;border-bottom:1px solid var(--zwart);display:block;border-radius:0}
+      .nav-toggle{display:flex}
+      .nav-wa-btn{display:none}
+    }
 
     /* HERO */
-    .hero{position:relative;overflow:hidden;padding:60px 32px 44px;text-align:center}
-    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(255,85,0,.2) 0%,transparent 70%);pointer-events:none}
-    .hero-badge{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oranje);border:1.5px solid var(--oranje);padding:4px 14px;margin-bottom:16px}
-    .hero h1{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:clamp(2.4rem,7vw,4.2rem);text-transform:uppercase;letter-spacing:-1px;line-height:.95;margin-bottom:14px;color:#fff}
-    .hero h1 em{color:var(--oranje);font-style:normal}
-    .hero-sub{font-size:.92rem;color:#888;max-width:400px;margin:0 auto 12px;line-height:1.6}
-    .price-tag{display:inline-block;background:var(--oranje);color:#fff;font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.5rem;padding:6px 22px;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%)}
+    .hero{position:relative;overflow:hidden;padding:56px 32px 40px;text-align:center}
+    .hero::before{content:"";position:absolute;top:0;left:20%;width:60%;height:100%;background:var(--oranje);opacity:.14;border-radius:0 0 60% 60%;pointer-events:none}
+    .hero-badge{position:relative;display:inline-block;font-family:"Fraunces",serif;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wit);background:var(--zwart);padding:7px 16px;margin-bottom:18px;border-radius:6px;transform:rotate(-3deg)}
+    .hero h1{position:relative;font-weight:900;font-size:clamp(2.3rem,6.5vw,3.8rem);letter-spacing:-1.5px;line-height:1;margin-bottom:16px;color:var(--zwart)}
+    .hero h1 em{font-style:italic;color:var(--oranje-dk)}
+    .hero-sub{position:relative;font-size:.98rem;color:var(--zwart);opacity:.8;max-width:420px;margin:0 auto 18px;line-height:1.6;font-weight:600}
+    .price-tag{position:relative;display:inline-block;background:var(--wit);color:var(--zwart);font-family:"Fraunces",serif;font-weight:900;font-size:1.3rem;padding:8px 22px;border:3px solid var(--zwart);border-radius:10px;box-shadow:5px 5px 0 var(--zwart);transform:rotate(-1.5deg)}
 
     /* GRID */
     .shirts-section{max-width:900px;margin:0 auto;padding:0 24px 40px}
-    .shirts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-
-    .shirt-card{background:var(--card);border:1px solid var(--rand);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;position:relative}
-    .shirt-card:hover{transform:translateY(-5px);border-color:var(--oranje);box-shadow:0 24px 60px rgba(255,85,0,.18)}
-    .shirt-card.active{border-color:var(--oranje);box-shadow:0 0 0 2px var(--oranje),0 20px 50px rgba(255,85,0,.2)}
-
-    .shirt-img-wrap{position:relative;overflow:hidden;background:#111;aspect-ratio:4/3}
-    .shirt-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .4s;display:block}
+    .shirts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .shirt-card{background:var(--kaart);border:3px solid var(--zwart);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;box-shadow:6px 6px 0 var(--zwart)}
+    .shirt-card:hover{transform:translateY(-4px)}
+    .shirt-card.active{border-color:var(--oranje-dk);box-shadow:6px 6px 0 var(--oranje-dk)}
+    .shirt-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3;border-bottom:3px solid var(--zwart)}
+    .shirt-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block}
     .shirt-card:hover .shirt-img-wrap img,.shirt-card.active .shirt-img-wrap img{transform:scale(1.05)}
-    .shirt-img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(255,85,0,.28) 0%,transparent 55%);opacity:0;transition:opacity .3s}
-    .shirt-card:hover .shirt-img-wrap::after,.shirt-card.active .shirt-img-wrap::after{opacity:1}
-
-    .badge-pos{position:absolute;top:14px;left:14px;background:var(--oranje);color:#fff;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;z-index:2;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 100%,6px 100%)}
-    .q-select{position:absolute;bottom:14px;right:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.2);font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:6px;cursor:pointer;transition:background .2s;z-index:2}
-    .shirt-card.active .q-select{background:var(--oranje);border-color:var(--oranje)}
-    .q-select:hover{background:rgba(255,85,0,.6)}
-
-    .shirt-info{padding:16px 18px 18px}
-    .shirt-label{font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oranje);margin-bottom:3px}
-    .shirt-title{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.45rem;text-transform:uppercase;color:#fff;margin-bottom:8px}
+    .badge-pos{position:absolute;top:12px;left:12px;background:var(--zwart);color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;z-index:2;border-radius:6px}
+    .q-select{position:absolute;bottom:12px;right:12px;background:var(--wit);color:var(--zwart);border:2px solid var(--zwart);font-family:"Fraunces",serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s;z-index:2}
+    .shirt-card.active .q-select{background:var(--oranje-dk);border-color:var(--oranje-dk);color:var(--wit)}
+    .q-select:hover{background:var(--zwart);color:var(--wit)}
+    .shirt-info{padding:16px 16px 18px}
+    .shirt-label{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--oranje-dk);margin-bottom:3px}
+    .shirt-title{font-family:"Fraunces",serif;font-weight:800;font-size:1.35rem;color:var(--zwart);margin-bottom:8px}
     .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-    .chip{font-size:.72rem;padding:3px 9px;border-radius:20px;border:1px solid #2e2e2e;color:#888}
+    .chip{font-size:.72rem;padding:3px 10px;border-radius:20px;border:1.5px solid var(--zwart);color:var(--zwart);font-weight:700}
     .shirt-bottom{display:flex;align-items:center;justify-content:space-between}
-    .shirt-price{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.55rem;color:#fff}
-    .shirt-price small{font-size:.8rem;font-weight:400;color:#555;margin-left:3px}
-    .check-circle{width:28px;height:28px;border-radius:50%;border:2px solid #333;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
-    .shirt-card.active .check-circle{background:var(--oranje);border-color:var(--oranje)}
+    .shirt-price{font-family:"Fraunces",serif;font-weight:900;font-size:1.35rem;color:var(--zwart)}
+    .shirt-price small{font-size:.72rem;font-weight:600;color:var(--zwart);opacity:.6;margin-left:3px}
+    .check-circle{width:28px;height:28px;border-radius:50%;border:2px solid var(--zwart);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+    .shirt-card.active .check-circle{background:var(--oranje-dk);border-color:var(--oranje-dk)}
     .check-circle svg{opacity:0;transition:opacity .2s}
     .shirt-card.active .check-circle svg{opacity:1}
 
     /* FORM */
     .form-section{max-width:540px;margin:0 auto;padding:0 24px 60px}
-    .form-heading{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:#fff;margin-bottom:18px}
-    .form-heading em{color:var(--oranje);font-style:normal}
-    .bestel-card{background:var(--card);border-radius:16px;border:1px solid var(--rand);padding:26px}
-    .preview-strip{display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;background:rgba(255,85,0,.07);border:1px solid rgba(255,85,0,.18);margin-bottom:18px}
-    .preview-strip img{width:50px;height:50px;object-fit:cover;border-radius:6px}
-    .preview-name{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;color:#fff}
-    .preview-price{font-size:.78rem;color:var(--oranje);font-weight:600;margin-top:2px}
+    .form-heading{font-weight:900;font-size:1.5rem;letter-spacing:-.3px;color:var(--zwart);margin-bottom:18px}
+    .form-heading em{color:var(--oranje-dk);font-style:italic}
+    .bestel-card{background:var(--kaart);border-radius:16px;border:3px solid var(--zwart);padding:26px;box-shadow:6px 6px 0 var(--zwart)}
+    .preview-strip{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:var(--bruin-lt);border:2px solid var(--zwart);margin-bottom:18px}
+    .preview-strip img{width:50px;height:50px;object-fit:cover;border-radius:8px;border:2px solid var(--zwart)}
+    .preview-name{font-family:"Fraunces",serif;font-weight:700;font-size:.95rem;color:var(--zwart)}
+    .preview-price{font-size:.78rem;color:var(--oranje-dk);font-weight:700;margin-top:2px}
     .form-row{display:flex;flex-direction:column;gap:5px;margin-bottom:11px}
-    .form-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#666}
-    .form-input,.form-select{width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid #4a4a70;background:#2a2a48;color:#f0f0f0;font-size:.9rem;font-family:Barlow,sans-serif;transition:border-color .2s,box-shadow .2s,background .2s}
-    .form-select option{background:#2a2a48}
-    .form-input:focus,.form-select:focus{outline:none;border-color:var(--oranje);box-shadow:0 0 0 3px rgba(255,85,0,.18);background:#32325a}
-    .form-input:hover,.form-select:hover{border-color:#6a6a90;background:#2e2e52}
-    .form-input::placeholder{color:#8080a8}
-    .divider{height:1px;background:#212121;margin:14px 0}
-    button[type="submit"]{margin-top:16px;width:100%;background:var(--oranje);color:#fff;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;border:none;padding:14px 22px;cursor:pointer;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,12px 100%);transition:background .2s}
-    button[type="submit"]:hover{background:var(--oranje-dk)}
-    button[type="submit"]:disabled{background:#2a2a2a;color:#555;cursor:not-allowed}
-    .wa-btn{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:12px;padding:12px;border-radius:8px;border:1px solid #1a4a28;background:rgba(37,211,102,.06);color:#25D366;text-decoration:none;font-weight:600;font-size:.85rem;transition:background .2s}
-    .wa-btn:hover{background:rgba(37,211,102,.12)}
-    .form-status{margin-top:12px;font-size:.85rem;text-align:center;padding:10px;border-radius:8px;display:none}
-    .form-status.laden{display:block;background:#1a1500;color:#f0b429;border:1px solid #3a3000}
-    .form-status.succes{display:block;background:#0a1f11;color:#25D366;border:1px solid #1a4a2a}
-    .form-status.fout{display:block;background:#1f0a0a;color:#ff6b6b;border:1px solid #4a1a1a}
-
+    .form-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--zwart);opacity:.7}
+    .form-input,.form-select{width:100%;padding:11px 14px;border-radius:10px;border:2px solid var(--zwart);background:var(--wit);color:var(--zwart);font-size:.9rem;font-family:"Nunito Sans",sans-serif;transition:border-color .2s,box-shadow .2s}
+    .form-select option{background:var(--wit)}
+    .form-input:focus,.form-select:focus{outline:none;border-color:var(--oranje-dk);box-shadow:0 0 0 3px rgba(232,84,28,.18)}
+    .form-input:hover,.form-select:hover{border-color:var(--oranje-dk)}
+    .form-input::placeholder{color:#8a8272}
+    .divider{height:2px;background:var(--zwart);opacity:.1;margin:14px 0}
+    button[type="submit"]{margin-top:16px;width:100%;background:var(--zwart);color:var(--wit);font-family:"Fraunces",serif;font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;border:3px solid var(--zwart);padding:14px 22px;cursor:pointer;border-radius:12px;box-shadow:5px 5px 0 var(--oranje-dk);transition:transform .15s,box-shadow .15s}
+    button[type="submit"]:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--oranje-dk)}
+    button[type="submit"]:disabled{background:#ccc;color:#888;border-color:#ccc;box-shadow:none;cursor:not-allowed}
+    .wa-btn{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:12px;padding:12px;border-radius:10px;border:2px solid #25D366;background:rgba(37,211,102,.08);color:#1b8a48;text-decoration:none;font-weight:700;font-size:.85rem;transition:background .2s}
+    .wa-btn:hover{background:rgba(37,211,102,.16)}
+    .form-status{margin-top:12px;font-size:.85rem;text-align:center;padding:10px;border-radius:10px;display:none;font-weight:700;border:2px solid var(--zwart)}
+    .form-status.laden{display:block;background:var(--bruin-lt);color:var(--zwart)}
+    .form-status.succes{display:block;background:#dff5e6;color:#1b7a3d;border-color:#1b7a3d}
+    .form-status.fout{display:block;background:#fbe2de;color:#b3341a;border-color:#b3341a}
     @media(max-width:600px){
       .shirts-grid{grid-template-columns:1fr}
-      .hero{padding:48px 18px 34px}
+      .hero{padding:44px 18px 30px}
       .shirts-section,.form-section{padding-left:16px;padding-right:16px}
-    }
-
-    nav {
-      position:fixed; top:0; left:0; right:0; height:68px;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:0 40px;
-      background:rgba(35,35,58,0.97);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #3a3a5e;
-      z-index:100;
-    }
-    .logo {
-      font-family:'Barlow Condensed',sans-serif;
-      font-weight:900; font-size:1.45rem;
-      letter-spacing:-0.5px; text-decoration:none; color:#fff;
-    }
-    .logo span { color:#FF5500; }
-    .nav-links {
-      list-style:none;
-      display:flex;
-      gap:36px;
-    }
-    .nav-links a {
-      font-size:0.875rem;
-      font-weight:600;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      text-decoration:none;
-      color:#ccc;
-      transition:color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color:#FF5500; }
-    .nav-toggle {
-      display:none;
-      flex-direction:column;
-      gap:5px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-    }
-    .nav-toggle span {
-      display:block;
-      width:24px; height:2px;
-      background:#fff;
-    }
-    @media(max-width:900px){
-      nav { padding:0 20px; }
-      .nav-links {
-        display:none;
-        position:fixed;
-        top:68px; left:0; right:0;
-        background:#1a1a2e;
-        flex-direction:column;
-        gap:0;
-        border-bottom:1px solid #2a2a45;
-      }
-      .nav-links.open { display:flex; }
-      .nav-links a {
-        padding:14px 24px;
-        border-bottom:1px solid #2a2a45;
-        display:block;
-      }
-      .nav-toggle { display:flex; }
     }
   </style>
 </head>
 <body>
-
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
+      <span>GRATIS VERZENDING</span><span>VIER KLEUREN</span><span>€44,99</span><span>GEEN WACHTTIJD</span><span>HERBRUIKBAAR</span>
+    </div>
+  </div>
   <nav>
-    <a class="logo" href="index.html">VOETBALSHIRTS<span>NL</span></a>
-    <button class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+    <a class="logo" href="index.html">Kiek<span>cam</span></a>
+    <button class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu openen">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-menu">
-      <li><a href="index.html#shirts">Shirts</a></li>
+      <li><a href="index.html#kleuren">Kleuren</a></li>
+      <li><a href="index.html#hoe-het-werkt">Hoe het werkt</a></li>
       <li><a href="bestellen.html" aria-current="page">Bestellen</a></li>
-      <li><a href="gripsokken.html">Gripsokken</a></li>
       <li><a href="over-ons.html">Over ons</a></li>
     </ul>
+    <div class="nav-right">
+      <a href="https://wa.me/31630576584" class="nav-wa-btn" aria-label="Contact via WhatsApp">WhatsApp</a>
+      <a href="https://wa.me/31630576584" class="whatsapp-nav-icon" aria-label="WhatsApp contact openen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+    </div>
   </nav>
-
   <section class="hero">
-    <div class="hero-badge">Beperkte oplage · 2026</div>
-    <h1>Fan-versie shirt<br><em>Nederlands Elftal</em></h1>
-    <p class="hero-sub">Kies jouw shirt hieronder en vul je gegevens in. Wij regelen de rest.</p>
-    <div class="price-tag">€29,99 per stuk, excl. verzendkosten</div>
+    <div class="hero-badge">Beperkte voorraad · 2026</div>
+    <h1>Bestel je <em>Kiekcam</em></h1>
+    <p class="hero-sub">Kies jouw kleur hieronder en vul je gegevens in. Wij regelen de rest.</p>
+    <div class="price-tag">€44,99 per camera · gratis verzending</div>
   </section>
-
   <div class="shirts-section">
     <div class="shirts-grid" id="shirtsGrid">
-      <article class="shirt-card active" data-shirt="Fan-versie thuisshirt 2026" tabindex="0" aria-label="Selecteer oranje thuisshirt 2026">
-        <div class="shirt-img-wrap">
-          <div class="badge-pos">Thuis</div>
-          <img src="oranje-shirt.jpg" alt="Oranje fan-versie thuisshirt Nederlands elftal 2026">
+      <article class="shirt-card active" data-shirt="Kiekcam Wit" tabindex="0" aria-label="Selecteer Kiekcam in wit">
+        <div class="shirt-img-wrap" style="background:#F5F1E4">
+          <div class="badge-pos">Wit</div>
+          <img src="kiekcam-wit.jpg" alt="Kiekcam retro digitale camera in wit">
           <button class="q-select" type="button">Geselecteerd</button>
         </div>
         <div class="shirt-info">
-          <div class="shirt-label">Thuisshirt</div>
-          <div class="shirt-title">Oranje 2026</div>
+          <div class="shirt-label">Retro-versie</div>
+          <div class="shirt-title">Kiekcam Wit</div>
           <div class="chips">
-            <span class="chip">Oranje</span>
-            <span class="chip">S – XL</span>
-            <span class="chip">Fan-versie</span>
+            <span class="chip">Wit</span>
+            <span class="chip">Vier filters</span>
+            <span class="chip">Oplaadbaar</span>
           </div>
           <div class="shirt-bottom">
-            <div class="shirt-price">€29,99 <small>per stuk, excl. verzendkosten</small></div>
+            <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -204,23 +193,70 @@
           </div>
         </div>
       </article>
-
-      <article class="shirt-card" data-shirt="Fan-versie uitshirt 2026" tabindex="0" aria-label="Selecteer wit uitshirt 2026">
-        <div class="shirt-img-wrap">
-          <div class="badge-pos">Uit</div>
-          <img src="wit-shirt.jpg" alt="Wit fan-versie uitshirt Nederlands elftal 2026">
+      <article class="shirt-card" data-shirt="Kiekcam Zwart" tabindex="0" aria-label="Selecteer Kiekcam in zwart">
+        <div class="shirt-img-wrap" style="background:#18140F">
+          <div class="badge-pos">Zwart</div>
+          <img src="kiekcam-zwart.jpg" alt="Kiekcam retro digitale camera in zwart">
           <button class="q-select" type="button">Selecteer</button>
         </div>
         <div class="shirt-info">
-          <div class="shirt-label">Uitshirt</div>
-          <div class="shirt-title">Wit 2026</div>
+          <div class="shirt-label">Retro-versie</div>
+          <div class="shirt-title">Kiekcam Zwart</div>
           <div class="chips">
-            <span class="chip">Wit / Oranje</span>
-            <span class="chip">S – XL</span>
-            <span class="chip">Fan-versie</span>
+            <span class="chip">Zwart</span>
+            <span class="chip">Vier filters</span>
+            <span class="chip">Oplaadbaar</span>
           </div>
           <div class="shirt-bottom">
-            <div class="shirt-price">€29,99 <small>per stuk, excl. verzendkosten</small></div>
+            <div class="shirt-price">€44,99 <small>per camera</small></div>
+            <div class="check-circle">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="shirt-card" data-shirt="Kiekcam Oranje" tabindex="0" aria-label="Selecteer Kiekcam in oranje">
+        <div class="shirt-img-wrap" style="background:#E8541C">
+          <div class="badge-pos">Oranje</div>
+          <img src="kiekcam-oranje.jpg" alt="Kiekcam retro digitale camera in oranje">
+          <button class="q-select" type="button">Selecteer</button>
+        </div>
+        <div class="shirt-info">
+          <div class="shirt-label">Retro-versie</div>
+          <div class="shirt-title">Kiekcam Oranje</div>
+          <div class="chips">
+            <span class="chip">Oranje</span>
+            <span class="chip">Vier filters</span>
+            <span class="chip">Oplaadbaar</span>
+          </div>
+          <div class="shirt-bottom">
+            <div class="shirt-price">€44,99 <small>per camera</small></div>
+            <div class="check-circle">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="shirt-card" data-shirt="Kiekcam Bruin" tabindex="0" aria-label="Selecteer Kiekcam in bruin">
+        <div class="shirt-img-wrap" style="background:#6B4423">
+          <div class="badge-pos">Bruin</div>
+          <img src="kiekcam-bruin.jpg" alt="Kiekcam retro digitale camera in bruin">
+          <button class="q-select" type="button">Selecteer</button>
+        </div>
+        <div class="shirt-info">
+          <div class="shirt-label">Retro-versie</div>
+          <div class="shirt-title">Kiekcam Bruin</div>
+          <div class="chips">
+            <span class="chip">Bruin</span>
+            <span class="chip">Vier filters</span>
+            <span class="chip">Oplaadbaar</span>
+          </div>
+          <div class="shirt-bottom">
+            <div class="shirt-price">€44,99 <small>per camera</small></div>
             <div class="check-circle">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2 7l3.5 3.5L12 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -231,166 +267,58 @@
       </article>
     </div>
   </div>
-
   <div class="form-section" id="bestel-form-blok">
     <div class="form-heading">Jouw <em>bestelling</em></div>
     <div class="bestel-card">
       <div class="preview-strip">
-        <img id="previewImg" src="oranje-shirt.jpg" alt="Geselecteerd shirt">
+        <img id="previewImg" src="kiekcam-wit.jpg" alt="Geselecteerde Kiekcam">
         <div>
-          <div class="preview-name" id="previewName">Fan-versie thuisshirt 2026</div>
-          <div class="preview-price">€29,99 per stuk, excl. verzendkosten</div>
+          <div class="preview-name" id="previewName">Kiekcam Wit</div>
+          <div class="preview-price">€44,99 per camera</div>
         </div>
       </div>
-
       <form id="bestel-form" method="POST" action="https://formspree.io/f/xbdpjozq" novalidate>
-        <input type="hidden" name="subject" value="Nieuwe bestelling shirt via website"/>
-
+        <input type="hidden" name="subject" value="Nieuwe bestelling Kiekcam via website"/>
         <div class="form-row">
           <label for="naam" class="form-label">Naam</label>
           <input id="naam" name="naam" type="text" required class="form-input" placeholder="Voor- en achternaam" autocomplete="name"/>
         </div>
-
         <div class="form-row">
           <label for="email" class="form-label">E-mailadres</label>
           <input id="email" name="email" type="email" required class="form-input" placeholder="jij@example.nl" autocomplete="email"/>
         </div>
-
         <div class="form-row">
           <label for="telefoon" class="form-label">06-nummer</label>
           <input id="telefoon" name="telefoon" type="tel" required class="form-input" placeholder="06-12345678" autocomplete="tel"/>
         </div>
-
         <div class="form-row">
           <label for="adres" class="form-label">Adres</label>
           <input id="adres" name="adres" type="text" required class="form-input" placeholder="Straat + huisnummer" autocomplete="street-address"/>
         </div>
-
         <div class="form-row">
           <label for="postcode" class="form-label">Postcode + woonplaats</label>
           <input id="postcode" name="postcode" type="text" required class="form-input" placeholder="1234AB Amsterdam" autocomplete="postal-code"/>
         </div>
-
         <div class="divider"></div>
-
         <div class="form-row">
-          <label for="maat" class="form-label">Maat</label>
-          <select id="maat" name="maat" required class="form-select">
-            <option value="" disabled selected>Kies je maat</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
+          <label for="shirt" class="form-label">Kleur</label>
+          <select id="shirt" name="kleur" required class="form-select">
+            <option value="Kiekcam Wit">Kiekcam Wit</option>
+            <option value="Kiekcam Zwart">Kiekcam Zwart</option>
+            <option value="Kiekcam Oranje">Kiekcam Oranje</option>
+            <option value="Kiekcam Bruin">Kiekcam Bruin</option>
           </select>
         </div>
-
-        <div class="form-row">
-          <label for="shirt" class="form-label">Shirt</label>
-          <select id="shirt" name="shirt" required class="form-select">
-            <option value="Fan-versie thuisshirt 2026">Fan-versie thuisshirt 2026</option>
-            <option value="Fan-versie uitshirt 2026">Fan-versie uitshirt 2026</option>
-          </select>
-        </div>
-
         <button type="submit" id="submit-btn">Bestelling versturen</button>
-
         <a id="wa-link" class="wa-btn" href="#" target="_blank" rel="noopener noreferrer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           Of bestel via WhatsApp
         </a>
-
         <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
       </form>
     </div>
   </div>
-
   <script>
-    const shirtSelect = document.getElementById('shirt');
-    const previewImg = document.getElementById('previewImg');
-    const previewName = document.getElementById('previewName');
-    const formBlock = document.getElementById('bestel-form-blok');
-    const submitBtn = document.getElementById('submit-btn');
-    const formStatus = document.getElementById('form-status');
-    const waLink = document.getElementById('wa-link');
-
-    function setActive(card) {
-      document.querySelectorAll('.shirt-card').forEach(c => {
-        c.classList.remove('active');
-        c.querySelector('.q-select').textContent = 'Selecteer';
-      });
-      card.classList.add('active');
-      card.querySelector('.q-select').textContent = 'Geselecteerd';
-      const name = card.getAttribute('data-shirt');
-      shirtSelect.value = name;
-      previewName.textContent = name;
-      previewImg.src = card.querySelector('img').src;
-    }
-
-    document.querySelectorAll('.shirt-card').forEach(card => {
-      card.addEventListener('click', () => {
-        setActive(card);
-        if (window.innerWidth < 700) {
-          formBlock.scrollIntoView({ behavior:'smooth', block:'start' });
-        }
-      });
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          setActive(card);
-        }
-      });
-    });
-
-    function buildWA() {
-      const vals = ['naam','email','telefoon','adres','postcode','maat'].map(id =>
-        document.getElementById(id).value.trim()
-      );
-      const shirt = shirtSelect.value;
-      const labels = ['Naam','Email','06-nummer','Adres','Postcode','Maat'];
-      let text = 'Bestelling fan-versie shirt%0A%0A';
-      vals.forEach((v,i) => {
-        text += labels[i] + ': ' + encodeURIComponent(v) + '%0A';
-      });
-      text += 'Shirt: ' + encodeURIComponent(shirt) + '%0A';
-      text += 'Prijs: €29,99 per stuk, excl. verzendkosten';
-      return 'https://wa.me/31630576584?text=' + text;
-    }
-
-    waLink.addEventListener('click', e => {
-      e.preventDefault();
-      window.open(buildWA(), '_blank');
-    });
-
-    document.getElementById('bestel-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      formStatus.className = 'form-status laden';
-      formStatus.textContent = 'Wordt verstuurd...';
-      try {
-        const res = await fetch(e.target.action, {
-          method: 'POST',
-          body: new FormData(e.target),
-          headers: { Accept: 'application/json' }
-        });
-        if (res.ok) {
-          // automatisch WhatsApp-bericht openen na succesvolle verzending
-          window.open(buildWA(), '_blank');
-
-          formStatus.className = 'form-status succes';
-          formStatus.textContent = 'Bestelling verstuurd! Je ontvangt een bevestiging per e-mail.';
-          e.target.reset();
-        } else {
-          throw new Error();
-        }
-      } catch {
-        formStatus.className = 'form-status fout';
-        formStatus.textContent = 'Er ging iets mis. Probeer opnieuw of gebruik WhatsApp.';
-      } finally {
-        submitBtn.disabled = false;
-      }
-    });
-  </script>
-</body>
-</html>
+    const
