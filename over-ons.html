@@ -45,24 +45,24 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     :root{
-      --bg:#ffffff;--bg-tint:#f5f5f7;--dark:#1d1d1f;
-      --ink:#1d1d1f;--ink-muted:#6e6e73;--ink-faint:#98989d;
-      --hairline:rgba(0,0,0,.08);--hairline-2:rgba(0,0,0,.12);
-      --accent:#E8541C;--accent-dk:#c1420f;--accent-tint:#fdece0;
+      --bg:#FFFCF6;--bg-tint:#F7EEDD;--dark:#2A1D12;
+      --ink:#2B2013;--ink-muted:#7C6E58;--ink-faint:#AC9C82;
+      --hairline:rgba(43,32,19,.12);--hairline-2:rgba(43,32,19,.18);
+      --accent:#E8541C;--accent-dk:#c1420f;--accent-tint:#FBE0CB;
       --r-pill:980px;--r-lg:20px;--r-md:14px;--r-sm:10px;
-      --shadow-md:0 12px 28px rgba(0,0,0,.09);
+      --shadow-md:0 14px 32px rgba(43,32,19,.13);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    body{font-family:"Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(1100px 560px at 50% -8%,#FFF2DD 0%,var(--bg) 62%);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
     a{color:inherit}
 
     /* NAV */
     nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--hairline)}
-    .logo{font-weight:700;font-size:1.28rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+    .logo{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.34rem;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
     .logo span{color:var(--accent)}
     .nav-links{list-style:none;display:flex;gap:6px}
     .nav-links a{display:inline-block;font-size:.92rem;font-weight:500;text-decoration:none;color:var(--ink-muted);padding:8px 14px;border-radius:var(--r-pill);transition:background .15s,color .15s}
@@ -80,12 +80,12 @@
     .breadcrumb a{color:var(--ink-muted);text-decoration:none}
     .breadcrumb a:hover{color:var(--ink)}
     .breadcrumb span{margin:0 6px}
-    .eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-    h1{font-weight:700;font-size:clamp(2.4rem,5.5vw,3.4rem);letter-spacing:-.03em;margin-bottom:16px;line-height:1.08;color:var(--ink)}
+    .eyebrow{display:inline-flex;align-items:center;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-dk);background:var(--accent-tint);padding:7px 15px;border-radius:var(--r-pill);margin-bottom:18px}
+    h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,5.6vw,3.6rem);letter-spacing:-.01em;margin-bottom:16px;line-height:1.08;color:var(--ink)}
     .subtitle{font-size:1.05rem;color:var(--ink-muted);margin-bottom:44px;max-width:620px;line-height:1.65;font-weight:400}
     .grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:20px;align-items:flex-start}
     .card{background:var(--bg);border-radius:var(--r-lg);padding:30px;border:1px solid var(--hairline)}
-    .card h2{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;margin-bottom:14px;color:var(--ink)}
+    .card h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.36rem;letter-spacing:-.01em;margin-bottom:14px;color:var(--ink)}
     .card p{font-size:.98rem;color:var(--ink-muted);line-height:1.75;margin-bottom:14px;font-weight:400}
     .card p:last-of-type{margin-bottom:0}
     .list{list-style:none;margin-top:6px}
