@@ -86,13 +86,19 @@
     .duurzaam-item p{font-size:.84rem;color:var(--ink-muted);line-height:1.5;font-weight:400}
 
     /* STAPPEN */
-    .stappen{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:76px}
-    .stap{background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:30px}
-    .stap-nr{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.2rem;margin-bottom:16px;background:var(--accent-tint);color:var(--accent-dk)}
-    .stap:nth-child(2) .stap-nr{background:#F7E8C4;color:#9C7317}
-    .stap:nth-child(3) .stap-nr{background:#EDE0CF;color:#6B4423}
-    .stap h3{font-family:"Fraunces",Georgia,serif;font-size:1.16rem;font-weight:600;margin-bottom:8px;color:var(--ink)}
-    .stap p{font-size:.94rem;color:var(--ink-muted);line-height:1.6;font-weight:400}
+    .stappen-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:76px}
+    .stappen-foto{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+    .stappen-foto img{width:100%;height:100%;object-fit:cover;display:block}
+    .stappen{display:flex;flex-direction:column;gap:8px}
+    .stap{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--hairline)}
+    .stap:last-child{border-bottom:none}
+    .stap-icon{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--accent-tint);color:var(--accent-dk)}
+    .stap-icon svg{width:24px;height:24px}
+    .stap:nth-child(2) .stap-icon{background:#F7E8C4;color:#9C7317}
+    .stap:nth-child(3) .stap-icon{background:#EDE0CF;color:#6B4423}
+    .stap-nr{display:block;font-size:.76rem;font-weight:700;letter-spacing:.06em;color:var(--ink-faint);margin-bottom:4px}
+    .stap h3{font-family:"Fraunces",Georgia,serif;font-size:1.14rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+    .stap p{font-size:.92rem;color:var(--ink-muted);line-height:1.6;font-weight:400}
 
     /* TABS */
     .tabs-head{max-width:600px;margin:0 0 28px}
@@ -133,7 +139,8 @@
       .nav-links a{padding:14px 24px;display:block;border-radius:0}
       .nav-toggle{display:flex}
       main{padding:56px 20px 44px}
-      .stappen{grid-template-columns:1fr}
+      .stappen-wrap{grid-template-columns:1fr;gap:28px}
+      .stappen-foto{order:-1;max-height:280px}
       .duurzaam-grid{grid-template-columns:repeat(2,1fr)}
       .duurzaam{padding:24px 20px}
       .tab-panel{grid-template-columns:1fr;gap:24px}
@@ -201,21 +208,35 @@
       </div>
     </div>
 
-    <div class="stappen">
-      <div class="stap">
-        <div class="stap-nr">01</div>
-        <h3>Kiek je moment</h3>
-        <p>Druk af en kies meteen een van de vier retro filters, zonder ingewikkelde instellingen.</p>
+    <div class="stappen-wrap">
+      <div class="stappen">
+        <div class="stap">
+          <div class="stap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M9 7l1-3h4l1 3"/></svg></div>
+          <div>
+            <span class="stap-nr">STAP 01</span>
+            <h3>Kiek je moment</h3>
+            <p>Druk af en kies meteen een van de vier retro filters, zonder ingewikkelde instellingen.</p>
+          </div>
+        </div>
+        <div class="stap">
+          <div class="stap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <div>
+            <span class="stap-nr">STAP 02</span>
+            <h3>Verbind met je telefoon</h3>
+            <p>Sluit de camera aan via de meegeleverde USB-C kabel en zet je foto's over — geen app of ontwikkeltijd nodig.</p>
+          </div>
+        </div>
+        <div class="stap">
+          <div class="stap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+          <div>
+            <span class="stap-nr">STAP 03</span>
+            <h3>Herbeleef & deel</h3>
+            <p>Bewaar je foto's, deel ze met vrienden of print ze uit voor op de muur.</p>
+          </div>
+        </div>
       </div>
-      <div class="stap">
-        <div class="stap-nr">02</div>
-        <h3>Verbind met je telefoon</h3>
-        <p>Sluit de camera aan via de meegeleverde USB-C kabel en zet je foto's over — geen app of ontwikkeltijd nodig.</p>
-      </div>
-      <div class="stap">
-        <div class="stap-nr">03</div>
-        <h3>Herbeleef & deel</h3>
-        <p>Bewaar je foto's, deel ze met vrienden of print ze uit voor op de muur.</p>
+      <div class="stappen-foto">
+        <img src="kiekcam-oranje.jpg" alt="Kiekcam retro digitale camera in oranje">
       </div>
     </div>
 
