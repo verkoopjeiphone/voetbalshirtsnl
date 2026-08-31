@@ -101,11 +101,13 @@
     .back-link{display:inline-flex;align-items:center;gap:6px;margin-top:40px;font-size:.94rem;text-decoration:none;color:var(--accent);font-weight:600;transition:gap .15s}
     .back-link:hover{gap:10px;color:var(--accent-dk)}
     @media (max-width:900px){
-      nav.site-nav{padding:0 20px}
+      nav.site-nav{padding:0 20px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px}
       .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--hairline);z-index:99;padding:8px 0}
       .nav-links.open{display:flex}
       .nav-links a{padding:14px 24px;display:block;border-radius:0}
-      .nav-toggle{display:flex}
+      .nav-toggle{display:flex;grid-column:1;justify-self:start}
+      .logo{grid-column:2;justify-self:center}
+      .nav-right{grid-column:3;justify-self:end}
       main{padding:56px 20px 44px}
       .grid{grid-template-columns:1fr}
       .usp-bar{grid-template-columns:1fr}
