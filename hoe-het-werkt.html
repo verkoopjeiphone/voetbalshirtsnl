@@ -72,15 +72,36 @@
     h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,5.6vw,3.6rem);letter-spacing:-.01em;margin-bottom:16px;line-height:1.08;color:var(--ink)}
     .subtitle{font-size:1.05rem;color:var(--ink-muted);margin-bottom:56px;max-width:620px;line-height:1.65;font-weight:400}
 
-    /* DUURZAAM */
-    .duurzaam{background:var(--bg-tint);border-radius:var(--r-lg);padding:32px;margin-bottom:48px}
-    .duurzaam h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:20px;color:var(--ink)}
-    .duurzaam-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-    .duurzaam-item{display:flex;flex-direction:column;gap:10px}
-    .duurzaam-item .icon{width:40px;height:40px;border-radius:50%;background:var(--accent-tint);color:var(--accent-dk);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .duurzaam-item .icon svg{width:19px;height:19px}
-    .duurzaam-item strong{font-size:.94rem;font-weight:600;color:var(--ink);letter-spacing:-.005em}
-    .duurzaam-item p{font-size:.84rem;color:var(--ink-muted);line-height:1.5;font-weight:400}
+    /* SLIMME KEUZE */
+    .slim-wrap{background:var(--bg-tint);border-radius:var(--r-lg);padding:32px;margin-bottom:48px}
+    .slim-wrap h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:8px;color:var(--ink)}
+    .slim-wrap .slim-sub{font-size:.92rem;color:var(--ink-muted);margin-bottom:24px;font-weight:400}
+    .slim-items{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 16px;align-items:start}
+    .slim-item{background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-md);overflow:hidden}
+    .slim-item-btn{all:unset;box-sizing:border-box;display:flex;align-items:flex-start;gap:12px;width:100%;padding:16px;cursor:pointer}
+    .slim-item-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+    .slim-icon{width:40px;height:40px;border-radius:50%;background:var(--accent-tint);color:var(--accent-dk);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .slim-icon svg{width:19px;height:19px}
+    .slim-item-text{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0;text-align:left}
+    .slim-item-text strong{font-size:.92rem;font-weight:600;color:var(--ink);letter-spacing:-.005em}
+    .slim-item-text p{font-size:.82rem;color:var(--ink-muted);line-height:1.45;font-weight:400}
+    .slim-item-toggle{font-size:1.15rem;line-height:1;color:var(--ink-faint);flex-shrink:0;margin-top:2px}
+    .slim-item-detail{margin:0;padding:0 16px 16px 68px;font-size:.82rem;color:var(--ink-muted);line-height:1.55;font-weight:400}
+    .slim-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;border:none;border-radius:var(--r-lg);padding:38px;max-width:480px;width:calc(100% - 48px);max-height:calc(100% - 48px);overflow:auto;background:var(--bg);box-shadow:var(--shadow-md);color:var(--ink)}
+    .slim-modal::backdrop{background:rgba(43,32,19,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .slim-modal-close{all:unset;position:absolute;top:14px;right:14px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer;color:var(--ink-faint);font-size:1.5rem;line-height:1}
+    .slim-modal-close:hover{background:var(--bg-tint);color:var(--ink)}
+    .slim-modal-icon{display:flex;width:52px;height:52px;border-radius:50%;background:var(--accent-tint);color:var(--accent-dk);align-items:center;justify-content:center;margin-bottom:20px}
+    .slim-modal-icon svg{width:24px;height:24px}
+    .slim-modal-title{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.32rem;letter-spacing:-.01em;margin-bottom:12px;color:var(--ink)}
+    .slim-modal-detail{font-size:.98rem;color:var(--ink-muted);line-height:1.65;font-weight:400;margin:0}
+    .slim-kleuren{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+    .slim-kleuren-swatches{display:flex;gap:8px}
+    .slim-kleuren-swatches img{width:52px;height:52px;object-fit:cover;border-radius:12px;border:1px solid var(--hairline);box-shadow:var(--shadow-sm)}
+    .slim-kleuren-label{font-size:.82rem;font-weight:600;color:var(--ink-muted)}
+    .slim-tagline{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:28px;font-size:.92rem;color:var(--ink-muted);font-weight:500;text-align:center}
+    .slim-tagline svg{width:16px;height:16px;color:var(--accent);flex-shrink:0}
+    .slim-tagline strong{color:var(--accent-dk);font-weight:600}
 
     /* STAPPEN */
     .stappen-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:76px}
@@ -139,8 +160,8 @@
       main{padding:56px 20px 44px}
       .stappen-wrap{grid-template-columns:1fr;gap:28px}
       .stappen-foto{order:-1;max-height:280px}
-      .duurzaam-grid{grid-template-columns:repeat(2,1fr)}
-      .duurzaam{padding:24px 20px}
+      .slim-items{grid-template-columns:1fr}
+      .slim-wrap{padding:24px 20px}
       .tab-panel{grid-template-columns:1fr;gap:24px}
       .tab-panel.active{display:flex;flex-direction:column-reverse}
       .tab-panels{padding:28px 22px}
@@ -176,30 +197,93 @@
       In drie stappen van moment naar foto. Hieronder lees je precies hoe.
     </p>
 
-    <div class="duurzaam">
-      <h2>Een duurzame keuze</h2>
-      <div class="duurzaam-grid">
-        <div class="duurzaam-item">
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1"/><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 10v4M11 10v4"/></svg></span>
-          <strong>Oplaadbaar</strong>
-          <p>Via USB-C op te laden, dus geen batterijen die je weggooit.</p>
+    <div class="slim-wrap">
+      <h2>De slimme keuze</h2>
+      <p class="slim-sub">Meer waarde, minder gedoe — zonder de nadelen van een wegwerpcamera.</p>
+      <div class="slim-kleuren">
+        <div class="slim-kleuren-swatches">
+          <img src="kiekcam-wit.jpg" alt="Kiekcam in wit" loading="lazy">
+          <img src="kiekcam-zwart.jpg" alt="Kiekcam in zwart" loading="lazy">
+          <img src="kiekcam-oranje.jpg" alt="Kiekcam in oranje" loading="lazy">
+          <img src="kiekcam-bruin.jpg" alt="Kiekcam in bruin" loading="lazy">
         </div>
-        <div class="duurzaam-item">
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3v4h6V3M9 12h6M9 16h4"/></svg></span>
-          <strong>Geen geheugenkaartje nodig</strong>
-          <p>Het geheugen zit al ingebouwd — niks extra's kopen of kwijtraken.</p>
+        <span class="slim-kleuren-label">Verkrijgbaar in 4 kleuren</span>
+      </div>
+      <div class="slim-items">
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-1">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 10a2.5 2.5 0 0 1 2.5-2h1a2 2 0 0 1 0 4h-1a2 2 0 0 0 0 4h1a2.5 2.5 0 0 0 2.5-2"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Bespaar geld</strong>
+              <p>Eenmalige aanschaf, jarenlang plezier.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-1" hidden>Je betaalt één keer voor de camera. Geen rolletjes kopen, geen ontwikkelkosten per set foto's — alles wat je maakt is direct inbegrepen.</p>
         </div>
-        <div class="duurzaam-item">
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="4"/><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/></svg></span>
-          <strong>Vier ingebouwde filters</strong>
-          <p>Standaard, retro, analoog of zwart-wit, direct instelbaar.</p>
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-2">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Hoge kwaliteit</strong>
+              <p>Scherpe foto's met een unieke retro look.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-2" hidden>De lens en sensor zijn afgestemd op een scherp beeld met een warme, analoge uitstraling — geen wazige of overbelichte kiekjes zoals bij een wegwerpcamera.</p>
         </div>
-        <div class="duurzaam-item">
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9M13 12l4-4M13 12l4 4"/><rect x="17" y="9" width="4" height="6" rx="1"/></svg></span>
-          <strong>Zo op je telefoon</strong>
-          <p>Via de meegeleverde USB-C kabel zet je je foto's in een paar tikken over.</p>
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-3">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="13" height="13" rx="2"/><path d="M4 4h13v3M4 4v13h3"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Onbeperkt foto's</strong>
+              <p>Geen limiet. Maak zoveel foto's als je wilt.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-3" hidden>Het interne geheugen biedt ruimte voor honderden foto's. Vol? Zet ze over naar je telefoon en begin gewoon opnieuw.</p>
+        </div>
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-4">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1"/><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M7 10v4M11 10v4"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Oplaadbaar</strong>
+              <p>Geen batterijen nodig. Gewoon opladen en gaan.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-4" hidden>Via de meegeleverde USB-C kabel laad je de Kiekcam in ongeveer een uur volledig op — goed voor een dag vol foto's.</p>
+        </div>
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-5">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Makkelijk in gebruik</strong>
+              <p>Plug &amp; play: eenvoudig overzetten via USB-C.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-5" hidden>Geen app, geen account, geen instellingen. Camera aansluiten op je telefoon of laptop en je foto's staan er direct op.</p>
+        </div>
+        <div class="slim-item">
+          <button type="button" class="slim-item-btn" aria-haspopup="dialog" data-detail="howto-slim-detail-6">
+            <span class="slim-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c9 0 14-5 14-14 0-1-.1-2-.3-3C10 5 5 10 5 19c0 .7 0 1.4.1 2z"/><path d="M5 19c4-4 8-6 12-11"/></svg></span>
+            <span class="slim-item-text">
+              <strong>Beter voor de planeet</strong>
+              <p>Minder afval, minder grondstoffen.</p>
+            </span>
+            <span class="slim-item-toggle" aria-hidden="true">+</span>
+          </button>
+          <p class="slim-item-detail" id="howto-slim-detail-6" hidden>Eén camera die je jarenlang meegaat, in plaats van cameraatje na cameraatje weg te gooien na één rolletje.</p>
         </div>
       </div>
+      <p class="slim-tagline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c9 0 14-5 14-14 0-1-.1-2-.3-3C10 5 5 10 5 19c0 .7 0 1.4.1 2z"/><path d="M5 19c4-4 8-6 12-11"/></svg> Eén camera, eindeloos veel herinneringen — <strong>op termijn voordeliger dan wegwerp.</strong></p>
+      <dialog class="slim-modal" id="slim-modal" aria-labelledby="slim-modal-title">
+        <button type="button" class="slim-modal-close" aria-label="Sluiten">&times;</button>
+        <span class="slim-modal-icon"></span>
+        <h3 class="slim-modal-title" id="slim-modal-title"></h3>
+        <p class="slim-modal-detail"></p>
+      </dialog>
     </div>
 
     <div class="stappen-wrap">
@@ -209,7 +293,7 @@
           <div>
             <span class="stap-nr">STAP 01</span>
             <h3>Kiek je moment</h3>
-            <p>Druk af en kies meteen een van de vier retro filters, zonder ingewikkelde instellingen.</p>
+            <p>Druk af en je moment staat meteen vast, zonder ingewikkelde instellingen.</p>
           </div>
         </div>
         <div class="stap">
@@ -321,6 +405,29 @@
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    const slimModal = document.getElementById('slim-modal');
+    if (slimModal) {
+      const slimModalIcon = slimModal.querySelector('.slim-modal-icon');
+      const slimModalTitle = slimModal.querySelector('.slim-modal-title');
+      const slimModalDetail = slimModal.querySelector('.slim-modal-detail');
+      const slimModalClose = slimModal.querySelector('.slim-modal-close');
+      document.querySelectorAll('.slim-item-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const detailEl = document.getElementById(btn.getAttribute('data-detail'));
+          slimModalIcon.innerHTML = btn.querySelector('.slim-icon').innerHTML;
+          slimModalTitle.textContent = btn.querySelector('strong').textContent;
+          slimModalDetail.textContent = detailEl ? detailEl.textContent : '';
+          slimModal.showModal();
+        });
+      });
+      slimModalClose.addEventListener('click', () => slimModal.close());
+      slimModal.addEventListener('click', (e) => {
+        const rect = slimModal.getBoundingClientRect();
+        const inside = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+        if (!inside) slimModal.close();
+      });
+    }
 
     const tabButtons = document.querySelectorAll('.tab-btn');
     tabButtons.forEach(btn => {
