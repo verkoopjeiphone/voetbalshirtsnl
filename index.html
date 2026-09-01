@@ -280,8 +280,11 @@
       .logo{grid-column:2;grid-row:1;justify-self:center}
       .kleuren-grid{grid-template-columns:1fr}
     }
-    .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:999;background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-lg);box-shadow:var(--shadow-md);padding:20px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;max-width:720px;margin:0 auto}
-    .cookie-banner-text{flex:1 1 260px;font-size:.92rem;color:var(--ink-muted);line-height:1.5;margin:0}
+    .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:999;background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-lg);box-shadow:var(--shadow-md);padding:20px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;max-width:720px;margin:0 auto}
+    .cookie-banner-icon{flex:0 0 auto;color:var(--ink-muted)}
+    .cookie-banner-body{flex:1 1 260px;display:flex;align-items:flex-start;gap:12px}
+    .cookie-banner-text{font-size:.92rem;color:var(--ink-muted);line-height:1.5;margin:0}
+    .cookie-banner-text a{color:var(--accent-dk);font-weight:600;text-decoration:underline}
     .cookie-banner-actions{display:flex;gap:10px;flex-wrap:wrap}
     .cookie-accept,.cookie-decline{border-radius:var(--r-pill);padding:10px 20px;font-weight:600;font-size:.9rem;cursor:pointer;border:1px solid transparent;font-family:inherit}
     .cookie-accept{background:var(--accent);color:#fff;border-color:var(--accent)}
@@ -476,6 +479,8 @@
     <a href="https://wa.me/31630576584">WhatsApp</a>
     <span aria-hidden="true"> · </span>
     <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+    <span aria-hidden="true"> · </span>
+    <a href="cookiebeleid.html">Cookiebeleid</a>
   </footer>
   <script>
     const navToggle = document.querySelector('.nav-toggle');
@@ -488,10 +493,13 @@
     }
   </script>
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookiemelding" hidden>
-    <p class="cookie-banner-text">We houden graag bij hoeveel mensen hun weg naar Kiekcam vinden, met een cookie van Google Analytics. Vind je dat goed?</p>
+    <div class="cookie-banner-body">
+      <svg class="cookie-banner-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
+      <p class="cookie-banner-text">We gebruiken cookies om je bezoek te meten en voor marketingdoeleinden, via Google Analytics. Lees ons <a href="cookiebeleid.html">cookiebeleid</a>.</p>
+    </div>
     <div class="cookie-banner-actions">
-      <button type="button" class="cookie-decline" id="cookieDecline">Liever niet</button>
-      <button type="button" class="cookie-accept" id="cookieAccept">Akkoord</button>
+      <button type="button" class="cookie-accept" id="cookieAccept">Alles accepteren</button>
+      <button type="button" class="cookie-decline" id="cookieDecline">Alles afwijzen</button>
     </div>
   </div>
   <script>
